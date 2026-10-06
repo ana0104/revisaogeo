@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Revisão de Geografia – Tempo e clima</title>
+<meta name="description" content="Revisão de Geografia, módulos 7 e 8: tempo, clima e alterações climáticas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#DDEFFF; --dots:#b9dcff; --paper:#ffffff; --ink:#1B1F3B; --muted:#4a5075;
+  --yellow:#FFD23F; --blue:#2F6FEB; --ok:#1F9E6E; --okbg:#DDF7EC; --bad:#D6334A; --badbg:#FDE3E7;
+  --tint:rgba(47,111,235,.09); --pink:#FF5C8A;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141833; --dots:#1f2550; --paper:#1e2346; --ink:#F2F4FF; --muted:#aab0d6;
+    --blue:#7FA8FF; --ok:#4ED3A0; --okbg:#153a33; --bad:#FF7A8C; --badbg:#3d1c29; --tint:rgba(127,168,255,.12);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141833; --dots:#1f2550; --paper:#1e2346; --ink:#F2F4FF; --muted:#aab0d6;
+  --blue:#7FA8FF; --ok:#4ED3A0; --okbg:#153a33; --bad:#FF7A8C; --badbg:#3d1c29; --tint:rgba(127,168,255,.12);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0;min-height:100%;
+  background-color:var(--bg);
+  color:var(--ink);font-family:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px;line-height:1.55;
+}
+.wrap{max-width:780px;margin:0 auto;padding:20px 16px 48px}
+h1{font-family:"Bangers",Impact,"Arial Black",sans-serif;font-weight:400;letter-spacing:1.5px;font-size:clamp(2.2rem,9vw,3.2rem);line-height:1;margin:6px 0;text-shadow:3px 3px 0 var(--yellow)}
+/* ===== IDENTIDADE · Profª Ana Clara — início ===== */
+:root{
+  --pac-board:#1f4d3a; --pac-board-hi:#2c6b52; --pac-board-lo:#183c2d;
+  --pac-wood:#b07a3c; --pac-wood-dk:#8a5d2a; --pac-outline:var(--ink,#1B1F3B);
+  --pac-chalk:#ffffff; --pac-chalk-soft:rgba(244,247,242,.62); --pac-accent:#FFD23F;
+  --pac-display:"Bangers",Impact,"Arial Black",sans-serif;
+  --pac-text:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+.pac{margin:12px 0 20px;transform:rotate(-1deg)}
+.pac-board{position:relative;overflow:hidden;background:radial-gradient(ellipse at 30% 20%,var(--pac-board-hi) 0,var(--pac-board) 60%,var(--pac-board-lo) 100%);border:7px solid var(--pac-wood);border-radius:8px;box-shadow:inset 0 0 0 3px var(--pac-wood-dk),6px 6px 0 var(--pac-outline);padding:50px 14px;text-align:center;color:var(--pac-chalk)}
+.pac-board::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 75% 85%,rgba(255,255,255,.07),transparent 55%);pointer-events:none}
+.pac-doodle{position:absolute;font-family:var(--pac-display);color:rgba(255,255,255,.28);font-size:1.05rem;letter-spacing:1px;line-height:1.25;pointer-events:none}
+.pac-doodle.tl{top:9px;left:12px;transform:rotate(-6deg);text-align:left}
+.pac-doodle.tr{top:9px;right:12px;transform:rotate(5deg);text-align:right}
+.pac-doodle.bl{bottom:9px;left:12px;transform:rotate(4deg);text-align:left}
+.pac-doodle.br{bottom:9px;right:12px;transform:rotate(-5deg);text-align:right}
+.pac-name{position:relative;display:block;font-family:var(--pac-display);font-weight:400;font-size:clamp(2rem,10vw,3rem);letter-spacing:1.5px;line-height:1.05;color:var(--pac-chalk);text-shadow:3px 3px 0 rgba(0,0,0,.35)}
+.pac-ord{font-size:.55em;vertical-align:.62em;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.14em;letter-spacing:0;margin-left:.05em}
+.pac-wa{width:1.25em;height:1.25em;flex:none;fill:currentColor}
+.pac-mini{display:inline-flex;align-items:center;gap:6px;padding:3px 14px 3px 10px;font-family:var(--pac-text);font-weight:800;font-size:.78rem;letter-spacing:1.4px;text-transform:uppercase;line-height:1.5;color:#fff;text-shadow:0 1px 0 rgba(0,0,0,.3);background:#17994A;border:2.5px solid var(--ink);border-radius:20px;box-shadow:3px 3px 0 var(--ink);text-decoration:none;transition:transform .1s ease,box-shadow .1s ease}
+.pac-mini .pac-wa{width:16px;height:16px;fill:#fff}
+.pac-mini:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.pac-mini:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.pac-mini:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.pac-tray{position:relative;height:13px;background:linear-gradient(#c58d4a,#9a6a32);border:3px solid var(--pac-outline);border-radius:3px;margin:-3px 18px 0;box-shadow:3px 3px 0 var(--pac-outline)}
+.pac-tray i{position:absolute;bottom:100%;height:8px;border:2px solid var(--pac-outline);border-radius:2px;margin-bottom:-1px}
+.pac-tray .c1{left:20px;width:28px;background:#fff}
+.pac-tray .c2{left:56px;width:22px;background:var(--pac-accent)}
+.pac-tray .er{right:22px;width:44px;height:13px;background:linear-gradient(#e8d9b5 55%,#3b3b3b 55%)}
+.pac-plate{display:inline-flex;align-items:center;max-width:100%;margin:2px 0 10px;padding:4px 14px;background:var(--pac-board);color:var(--pac-chalk);border:4px solid var(--pac-wood);border-radius:6px;box-shadow:3px 3px 0 var(--pac-outline);transform:rotate(-1deg);font-family:var(--pac-display);font-size:1.1rem;letter-spacing:1px;line-height:1.2}
+.pac-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* ===== IDENTIDADE — fim ===== */
+.sub{color:var(--muted);margin:0 0 20px;font-weight:600}
+.panel{background:var(--paper);border:3px solid var(--ink);border-radius:6px;box-shadow:6px 6px 0 var(--ink);padding:20px 18px}
+.grid{display:grid;gap:22px}
+.mod{display:flex;gap:14px;align-items:center;text-align:left;width:100%;font:inherit;color:var(--ink);background:var(--paper);border:3px solid var(--c,var(--ink));border-radius:6px;box-shadow:8px 8px 0 var(--c,var(--ink)),10px 14px 18px rgba(20,24,51,.24);padding:14px;cursor:pointer;transition:transform .08s ease, box-shadow .08s ease}
+.mod:hover{transform:translate(-2px,-2px);box-shadow:11px 11px 0 var(--c,var(--ink)),14px 18px 22px rgba(20,24,51,.28)}
+.mod:focus-visible,.btn:focus-visible,.opt:focus-visible,.tab:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.badge{flex:none;width:58px;height:58px;display:grid;place-items:center;border:3px solid var(--ink);border-radius:50%;font-family:"Bangers",Impact,sans-serif;font-size:1.4rem;color:#1B1F3B}
+.mod h2{margin:0;font-size:1.08rem;line-height:1.25}
+.mod p{margin:3px 0 0;color:var(--muted);font-size:.92rem}
+.best{font-weight:800;color:var(--ok)}
+.back{background:none;border:0;font:inherit;font-weight:800;color:var(--blue);cursor:pointer;padding:6px 0;margin-bottom:6px}
+.tabs{display:flex;gap:8px;margin:14px 0 18px}
+.tab{flex:1;padding:10px;font:inherit;font-weight:800;border:3px solid var(--ink);border-radius:6px;background:var(--paper);color:var(--ink);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--yellow);color:#1B1F3B;box-shadow:3px 3px 0 var(--ink)}
+.study h3{font-family:"Bangers",Impact,sans-serif;font-weight:400;letter-spacing:1px;font-size:1.5rem;margin:24px 0 6px;line-height:1.1}
+.study h3:first-child{margin-top:0}
+.study p{margin:0 0 10px}
+.study ul{margin:0 0 12px;padding-left:20px}
+.study li{margin-bottom:5px}
+.tbl{overflow-x:auto;margin:6px 0 14px}
+.tbl table{border-collapse:collapse;width:100%;min-width:300px;font-size:.95rem}
+.tbl th,.tbl td{border:2px solid var(--ink);padding:7px 9px;text-align:left;vertical-align:top}
+.tbl th{background:var(--yellow);color:#1B1F3B}
+.box{border-left:5px solid var(--blue);background:var(--tint);padding:10px 12px;border-radius:0 6px 6px 0;margin:8px 0 14px}
+.trick{border:2px dashed var(--ink);border-radius:6px;padding:10px 12px;margin:8px 0 14px}
+.book{display:inline-block;font-size:.85rem;font-weight:800;border:2px solid var(--ink);border-radius:20px;padding:1px 10px;margin:0 0 10px;background:var(--tint)}
+.balloons{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:8px 0 14px}
+.balloons figure{margin:0;border:2px solid var(--ink);border-radius:6px;padding:8px;text-align:center;background:var(--paper)}
+.balloons svg{width:100%;height:auto;max-width:130px;display:block;margin:0 auto 4px}
+.balloons figcaption{font-size:.88rem;font-weight:800;line-height:1.25}
+.balloons figcaption span{display:block;font-weight:600;color:var(--muted)}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0 14px}
+.vs div{border:3px solid var(--ink);border-radius:6px;padding:12px;text-align:center}
+.vs .big{font-family:"Bangers",Impact,sans-serif;font-size:1.7rem;letter-spacing:1px;line-height:1.1;display:block;margin:4px 0}
+.progress{display:flex;gap:4px;margin-bottom:14px}
+.progress span{flex:1;height:10px;border:2px solid var(--ink);border-radius:3px}
+.progress .ok{background:var(--ok)} .progress .bad{background:var(--bad)} .progress .now{background:var(--yellow)}
+.qnum{display:inline-block;font-family:"Bangers",Impact,sans-serif;font-size:1.35rem;letter-spacing:1px;background:var(--yellow);color:#1B1F3B;border:2px solid var(--ink);padding:0 10px;border-radius:4px;transform:rotate(-2deg);margin:0 8px 10px 0}
+.q{font-size:1.08rem;font-weight:800;margin:4px 0 12px}
+.excerpt{border-left:5px solid var(--blue);padding:8px 12px;margin:0 0 14px;background:var(--tint);border-radius:0 6px 6px 0;font-style:italic}
+.opts{display:grid;gap:10px}
+.opt{display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;padding:12px 14px;font:inherit;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:6px;cursor:pointer;box-shadow:3px 3px 0 var(--ink);transition:transform .08s ease}
+.opt:hover:not(:disabled){transform:translate(-1px,-1px)}
+.opt .l{font-weight:800;min-width:1.4em}
+.opt:disabled{cursor:default}
+.opt.right{background:var(--okbg);border-color:var(--ok);box-shadow:3px 3px 0 var(--ok)}
+.opt.wrong{background:var(--badbg);border-color:var(--bad);box-shadow:3px 3px 0 var(--bad)}
+.balloon{position:relative;margin-top:22px;padding:14px 16px;border:3px solid var(--ink);border-radius:22px;background:var(--paper);font-weight:600}
+.balloon::before{content:"";position:absolute;top:-16px;left:34px;border:14px solid transparent;border-bottom-color:var(--ink);border-top:0}
+.balloon::after{content:"";position:absolute;top:-10px;left:38px;border:10px solid transparent;border-bottom-color:var(--paper);border-top:0}
+.balloon .tag{font-family:"Bangers",Impact,sans-serif;font-size:1.5rem;letter-spacing:1px;display:block;line-height:1.1;margin-bottom:4px}
+.balloon.ok .tag{color:var(--ok)} .balloon.bad .tag{color:var(--bad)}
+.btn{margin-top:18px;width:100%;padding:14px;font:inherit;font-weight:800;font-size:1.05rem;background:var(--blue);color:#fff;border:3px solid var(--ink);border-radius:6px;cursor:pointer;box-shadow:4px 4px 0 var(--ink)}
+.btn.alt{background:var(--paper);color:var(--ink)}
+.score{font-family:"Bangers",Impact,sans-serif;font-size:clamp(4rem,20vw,6rem);line-height:1;margin:6px 0;letter-spacing:2px}
+.review{margin-top:12px;display:grid;gap:8px}
+.review div{padding:10px 12px;border:2px solid var(--ink);border-radius:6px;font-size:.95rem;background:var(--badbg)}
+.foot{margin-top:22px;color:var(--muted);font-size:.9rem;text-align:center}
+/* ===== JOGUINHOS ===== */
+.hud{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+.chip{border:3px solid var(--ink);border-radius:20px;padding:1px 12px;font-weight:800;font-size:.9rem;background:var(--paper)}
+.chip.hot{background:var(--yellow);color:#1B1F3B}
+.chip:empty{display:none}
+.bar{height:14px;border:3px solid var(--ink);border-radius:8px;overflow:hidden;background:var(--paper)}
+.bar i{display:block;height:100%;width:100%;background:var(--ok);transition:width .1s linear}
+.bar.low i{background:var(--bad)}
+.gcard{min-height:110px;display:grid;place-items:center;text-align:center;margin-top:14px}
+.gcard.word{font-family:"Bangers",Impact,sans-serif;font-size:clamp(2rem,10vw,3rem);letter-spacing:1px;line-height:1.1}
+.gcard.txt{font-weight:800;font-size:1.15rem;line-height:1.35}
+.ans{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.ans .btn{margin-top:0;font-size:1rem;padding:16px 6px}
+.btn.vt{background:var(--ok);color:#0b1020}
+.btn.vf{background:var(--bad);color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.vf,:root:not([data-theme="light"]) .bin.wrong{color:#0b1020}}
+:root[data-theme="dark"] .btn.vf,:root[data-theme="dark"] .bin.wrong{color:#0b1020}
+.vfb{min-height:54px;margin-top:12px;font-weight:800}
+.okm{color:var(--ok)} .badm{color:var(--bad)}
+.gballoon{max-width:240px;margin:0 auto 14px;color:var(--ink)}
+.gballoon svg,.svbtn svg{width:100%;height:auto;display:block}
+.svgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.svbtn{padding:8px;border:2px solid var(--ink);border-radius:6px;background:var(--paper);color:var(--ink);cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
+.svbtn:disabled{cursor:default}
+.svgrid .svbtn:last-child:nth-child(odd){grid-column:1/-1;width:50%;justify-self:center}
+.svbtn.right{background:var(--okbg);border-color:var(--ok);box-shadow:3px 3px 0 var(--ok)}
+.svbtn.wrong{background:var(--badbg);border-color:var(--bad);box-shadow:3px 3px 0 var(--bad)}
+.mem{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mcard{min-height:96px;padding:6px;font:inherit;border:3px solid var(--ink);border-radius:8px;background:var(--blue);color:#fff;cursor:pointer;box-shadow:3px 3px 0 var(--ink);display:grid;place-items:center;text-align:center}
+.mcard .mb{font-family:"Bangers",Impact,sans-serif;font-size:2rem}
+.mcard .mf{display:none;font-weight:800;font-size:.8rem;line-height:1.2;color:var(--ink)}
+.mcard.up,.mcard.done{cursor:default}
+.mcard.up .mb,.mcard.done .mb{display:none}
+.mcard.up .mf,.mcard.done .mf{display:block}
+.mcard.up{background:var(--paper)}
+.mcard.up.term{background:var(--yellow)} .mcard.up.term .mf{color:#1B1F3B}
+.mcard.done{background:var(--okbg);border-color:var(--ok);box-shadow:3px 3px 0 var(--ok)}
+.bins{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.bin{margin-top:0;padding:14px 6px;font-size:1rem;line-height:1.15}
+.bin small{display:block;font-weight:600;font-size:.72rem;opacity:.85}
+.bin.right{background:var(--ok);color:#0b1020}
+.bin.wrong{background:var(--bad);color:#fff}
+.fw{display:flex;flex-wrap:wrap;justify-content:center;gap:5px;margin:14px 0}
+.fl{display:inline-grid;place-items:center;width:clamp(20px,6.2vw,34px);height:clamp(34px,10vw,46px);border-bottom:4px solid var(--ink);font-family:"Bangers",Impact,sans-serif;font-size:1.7rem;line-height:1}
+.fl.miss{color:var(--bad)}
+.fk{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.key{padding:8px 0;font:inherit;font-weight:800;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:6px;cursor:pointer;box-shadow:2px 2px 0 var(--ink)}
+.key:disabled{cursor:default;box-shadow:none}
+.key.right{background:var(--okbg);border-color:var(--ok)}
+.key.wrong{background:var(--badbg);border-color:var(--bad);text-decoration:line-through}
+.slots{display:grid;gap:8px;margin-bottom:14px}
+.slot{border:2px dashed var(--ink);border-radius:6px;padding:8px 10px;font-size:.92rem;background:var(--tint)}
+.slot b{display:block;font-family:"Bangers",Impact,sans-serif;font-weight:400;letter-spacing:1px;font-size:1.05rem}
+.slot span{color:var(--muted)}
+.slot.full{border-style:solid;border-color:var(--ok);background:var(--okbg)}
+.slot.full span{color:var(--ink);font-weight:600}
+.cards{display:grid;gap:10px}
+.ecard{text-align:left;font:inherit;font-weight:700;color:var(--ink);background:var(--paper);border:3px solid var(--ink);border-radius:6px;box-shadow:4px 4px 0 var(--ink);padding:12px 14px;cursor:pointer}
+.ecard.used{display:none}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.shake{animation:shake .35s}
+@keyframes pop{0%{transform:scale(.92)}60%{transform:scale(1.04)}100%{transform:scale(1)}}
+.pop{animation:pop .25s}
+/* ===== DESIGN · tela inicial e cartões ===== */
+.ib{display:inline-block;width:1.05em;height:1.05em;vertical-align:-.17em;background:currentColor;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5ZM12 6.5v13'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5ZM12 6.5v13'/%3E%3C/svg%3E") center/contain no-repeat}
+.toprow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin:0 0 20px}
+.eyebrow{display:inline-block;margin:0;padding:2px 12px;font-weight:800;font-size:.72rem;letter-spacing:1.6px;text-transform:uppercase;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:20px}
+.htabs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 18px}
+.htab{display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 10px;font:inherit;font-weight:800;color:var(--ink);background:var(--paper);border:3px solid var(--ink);border-radius:8px;cursor:pointer;transition:transform .1s ease,box-shadow .1s ease}
+.htab[aria-selected="true"]{background:var(--yellow);color:#1B1F3B;box-shadow:4px 4px 0 var(--ink);transform:translate(-2px,-2px)}
+.htab:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.htab .cnt{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:11px;font-size:.78rem;background:var(--ink);color:var(--paper)}
+.prog{display:flex;align-items:center;gap:12px;margin:0 2px 26px;font-weight:800;font-size:.82rem;color:var(--muted)}
+.prog .track{flex:1;height:12px;border:2px solid var(--ink);border-radius:8px;background:var(--paper);overflow:hidden}
+.prog .track i{display:block;height:100%;background:var(--ok)}
+.prog b{color:var(--ink)}
+.mod{position:relative;gap:16px;padding:16px 14px 16px 16px;background:var(--paper)}
+.mod .mt{flex:1;min-width:0}
+.mod h2{font-size:1.12rem;font-weight:800;line-height:1.2}
+.badge{width:64px;height:64px;font-size:1.6rem;box-shadow:3px 3px 0 var(--ink);transform:rotate(-5deg);transition:transform .15s ease}
+.badge.sm{font-size:1.2rem}
+.mod:nth-child(even) .badge{transform:rotate(4deg)}
+.mod:hover .badge{transform:rotate(0) scale(1.07)}
+.badge svg{width:30px;height:30px;fill:none;stroke:#1B1F3B;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
+.pill{display:inline-block;margin-top:8px;padding:1px 10px;border:2px solid var(--ink);border-radius:20px;font-weight:800;font-size:.78rem;background:var(--okbg);color:var(--ink)}
+.go{flex:none;width:30px;height:30px;display:grid;place-items:center;border:2.5px solid var(--ink);border-radius:50%;background:var(--paper);transition:transform .15s ease}
+.go svg{width:14px;height:14px;fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.mod:hover .go{transform:translateX(3px)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.grid .mod{animation:rise .5s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--i,0)*60ms)}
+.foot .ib{margin-right:4px}
+.hrt{width:18px;height:18px;fill:var(--bad);stroke:var(--ink);stroke-width:1.7;stroke-linejoin:round;vertical-align:-4px;margin-right:2px}
+.hrt.off{fill:none;opacity:.5}
+/* ===== RESPONSIVO · celular, tablet e computador ===== */
+.wrap.wide{max-width:1120px}
+.hero>h1{font-size:clamp(2.8rem,14vw,4rem);text-shadow:4px 4px 0 var(--yellow);margin:8px 0 12px}
+@media (min-width:820px){
+  .wrap{padding:36px 32px 64px}
+  .wide .grid{grid-template-columns:1fr 1fr;gap:30px 32px}
+  .hero{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .hero>.toprow{align-self:flex-start;flex-wrap:nowrap}
+  .hero>.toprow .eyebrow,.hero>.toprow .pac-mini{white-space:nowrap;flex:none}
+  .hero>h1{font-size:5.4rem}
+  .hero>.pac{width:100%}
+  .hero>h1{margin:16px 0 44px}
+  .hero>.pac{max-width:37.5rem;margin:0 auto 52px}
+  .hero>.pac .pac-board{padding:84px 28px;border-width:10px}
+  .hero>.pac .pac-name{font-size:4.4rem}
+  .hero>.pac .pac-doodle{font-size:1.6rem}
+  .hero>.sub{font-size:1.1rem;margin:0}
+  .htabs{max-width:460px;margin:40px auto 22px}
+  .prog{max-width:520px;margin:0 auto 26px}
+  .mem{grid-template-columns:repeat(4,1fr);gap:12px}
+  .mcard{min-height:112px}
+  .mcard .mf{font-size:.95rem}
+  .fk{grid-template-columns:repeat(13,1fr)}
+  .svgrid{grid-template-columns:repeat(3,1fr)}
+}
+@media (prefers-reduced-motion: reduce){.mod,.opt,.htab,.go,.badge{transition:none}.shake,.pop,.grid .mod{animation:none}.bar i{transition:none}}
+/* ===== HISTÓRIA · extras ===== */
+.vs.three{grid-template-columns:repeat(3,1fr)}
+.vs.three .big{font-size:1.25rem}
+@media (max-width:560px){.vs.three{grid-template-columns:1fr}}
+.tl{display:grid;gap:0;margin:8px 0 14px;border-left:4px solid var(--ink);padding-left:16px}
+.tl div{position:relative;padding:6px 0 10px}
+.tl div::before{content:"";position:absolute;left:-25px;top:10px;width:14px;height:14px;border:3px solid var(--ink);border-radius:50%;background:var(--yellow)}
+.tl b{display:block;font-family:"Bangers",Impact,sans-serif;font-weight:400;letter-spacing:1px;font-size:1.25rem;line-height:1.1}
+.tl span{display:block;color:var(--ink)}
+.pyr{display:grid;justify-items:center;gap:6px;margin:8px auto 14px;max-width:420px}
+.pyr div{border:3px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);text-align:center;font-family:"Bangers",Impact,sans-serif;letter-spacing:1px;font-size:1.2rem;padding:4px 6px;color:#1B1F3B}
+.svbtn .svl{display:block;font-weight:800;font-size:.8rem;line-height:1.2;margin-top:4px}
+.gcard.word.long{font-size:clamp(1.3rem,5.5vw,1.9rem)}
+.bins .bin:last-child:nth-child(odd){grid-column:1/-1}
+.sec{font-family:"Bangers",Impact,sans-serif;font-weight:400;letter-spacing:1px;font-size:clamp(1.6rem,6vw,2.1rem);line-height:1.1;margin:34px 0 4px;text-shadow:2px 2px 0 var(--yellow);text-wrap:balance}
+.sec:first-of-type{margin-top:6px}
+.secsub{margin:0 0 18px;color:var(--muted);font-weight:600}
+.wide .grid.solo{grid-template-columns:1fr}
+/* ===== JOGOS DE HISTÓRIA · e modelo ===== */
+.duel{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.ev{min-height:130px;display:grid;place-items:center;text-align:center;font:inherit;font-weight:800;font-size:1rem;line-height:1.3;color:var(--ink);background:var(--paper);border:3px solid var(--ink);border-radius:8px;box-shadow:4px 4px 0 var(--ink);padding:12px;cursor:pointer;transition:transform .08s ease;min-width:0}
+.ev:hover{transform:translate(-1px,-1px)}
+.ev:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.clues{list-style:none;padding:0;margin:0 0 14px;display:grid;gap:8px;counter-reset:c}
+.clues li{counter-increment:c;position:relative;border:2px solid var(--ink);border-radius:6px;padding:9px 12px 9px 46px;background:var(--tint);font-weight:700;line-height:1.35}
+.clues li::before{content:counter(c);position:absolute;left:10px;top:50%;transform:translateY(-50%);width:26px;height:26px;display:grid;place-items:center;border-radius:50%;background:var(--yellow);color:#1B1F3B;border:2px solid var(--ink);font-family:"Bangers",Impact,sans-serif;font-size:1rem}
+.clues li.hide{background:transparent;border-style:dashed;color:var(--muted);font-weight:600}
+.btn:disabled{opacity:.5;cursor:default}
+.opt.off{opacity:.55}
+.opt.off span{text-decoration:line-through}
+.fl.sp{border-bottom:0;width:12px}
+.study code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88em;background:var(--tint);border:1px solid var(--ink);border-radius:4px;padding:0 4px}
+
+
+</style>
+</head>
+<body>
+<div class="wrap" id="root"></div>
+<script>
+/* CONTEÚDO · Geografia, módulos 7 e 8 (Tempo e clima · Alterações climáticas). O motor fica em ../assets/motor.js */
+const SITE={
+ id:"geografia",          // nome curto e único: separa o progresso salvo de cada matéria
+ titulo:"Revisão de Geografia",
+ serie:"6º ano · 3º trimestre",
+ doodles:["28 °C","1013 mb","N ↑","CO₂"],
+ contato:"https://wa.me/5511976280903",
+ subModulos:"Módulos 7 e 8: tempo e clima, alterações climáticas. Cada card é um assunto, com explicação e um quiz curto.",
+ subJogos:"Treine como um meteorologista: fenômenos, causas, consequências e o que cai na prova.",
+ rodapeModulos:"Quando aparece “pág.”, vale abrir a apostila e olhar o mapa, o esquema ou o gráfico citado.",
+ rodapeJogos:"Os joguinhos misturam os módulos 7 e 8. Errou? Sem problema: é treinando que se aprende."
+};
+const SECOES=[
+ {mod:0,t:"Comece por aqui",s:"As duas confusões que mais caem na prova."},
+ {mod:7,t:"Módulo 7 · Tempo e clima",s:"Elementos, fatores e tipos de clima. Apostila, págs. 232 a 254."},
+ {mod:8,t:"Módulo 8 · Alterações climáticas",s:"Ação humana, ozônio, efeito estufa e aquecimento global. Apostila, págs. 255 a 270."}
+];
+
+const MODS=[
+{
+ id:"conf", mod:0, tag:"!", color:"#FF9EC0",
+ title:"Tempo × Clima e Estufa × Ozônio", pages:"Módulos 7 e 8 · as duplas que mais confundem",
+ study:`
+<h3>Tempo × clima</h3>
+<p class="book"><i class='ib'></i> Pág. 234</p>
+<div class="vs">
+ <div style="background:#DDEFFF;color:#1B1F3B">Tempo<span class="big">AGORA</span>o estado da atmosfera em um momento</div>
+ <div style="background:#FFF1C2;color:#1B1F3B">Clima<span class="big">SEMPRE</span>o padrão de um longo período (cerca de 30 anos)</div>
+</div>
+<div class="trick"><strong>Truque:</strong> se a frase tem um dia ou um momento (“ontem”, “domingo”, “hoje”), é <strong>tempo</strong>. Se fala do que costuma acontecer (“os verões são chuvosos”, “os invernos são frios”), é <strong>clima</strong>.</div>
+<h3>Efeito estufa × camada de ozônio</h3>
+<p class="book"><i class='ib'></i> Págs. 258 a 262</p>
+<div class="tbl"><table>
+<tr><th></th><th>Efeito estufa</th><th>Camada de ozônio</th></tr>
+<tr><td>O que é</td><td>Fenômeno natural: gases e poeira <strong>retêm calor</strong> perto da superfície</td><td>Camada fina de gás ozônio na <strong>estratosfera</strong> (cerca de 32 km)</td></tr>
+<tr><td>Para que serve</td><td>Impede o resfriamento excessivo: sem ele, a Terra teria cerca de <strong>−17 °C</strong>; com ele, cerca de <strong>15 °C</strong></td><td><strong>Filtra os raios ultravioleta</strong> do Sol, nocivos à saúde</td></tr>
+<tr><td>O problema</td><td>Foi <strong>intensificado</strong> pela emissão de gases, como o <strong>gás carbônico (CO₂)</strong>, e causa o aquecimento global</td><td>Ficou com um <strong>“buraco”</strong> sobre a Antártida por causa do gás <strong>CFC</strong></td></tr>
+<tr><td>A solução citada</td><td>Reduzir a queima de combustíveis fósseis e as queimadas</td><td><strong>Protocolo de Montreal</strong> (1987), para eliminar o CFC</td></tr>
+</table></div>
+<div class="trick"><strong>Truque:</strong> estufa = <strong>calor preso</strong> (CO₂). Ozônio = <strong>escudo contra o ultravioleta</strong> (CFC).</div>`,
+ quiz:[
+  {ex:"“Ontem choveu muito em Belém.”", q:"A frase fala de:", ref:"pág. 234", o:["tempo","clima"], e:"Fala de um momento específico (ontem): é tempo."},
+  {ex:"“Os verões no Brasil central são quentes e chuvosos; já os invernos são secos.”", q:"A frase fala de:", ref:"pág. 234", o:["clima","tempo"], e:"É um padrão que se repete por muitos anos: é clima."},
+  {q:"Para se estabelecer um padrão climático, é preciso analisar a média das condições da atmosfera por cerca de:", ref:"pág. 235", o:["30 anos","1 semana","1 mês","1 dia"], e:"O clima é uma sucessão de tempos observada por um longo período."},
+  {q:"O efeito estufa é:", ref:"pág. 261", o:["um fenômeno natural que impede o resfriamento excessivo da Terra","um buraco na atmosfera causado pelo CFC","um tipo de chuva das áreas litorâneas","uma corrente marítima fria"], e:"Ele só virou problema quando foi intensificado pela ação humana."},
+  {q:"Sem o efeito estufa natural, a temperatura média da Terra seria de aproximadamente:", ref:"pág. 261", o:["−17 °C","15 °C","35 °C","0 °C"], e:"Com o efeito estufa, a média fica em torno de 15 °C."},
+  {q:"A camada de ozônio é importante porque:", ref:"pág. 258", o:["filtra os raios ultravioleta emitidos pelo Sol","retém o calor perto da superfície","produz as chuvas","forma os ventos"], e:"Ela fica na estratosfera, a cerca de 32 km de altitude."},
+  {q:"O gás responsável pelo “buraco” na camada de ozônio é o:", ref:"pág. 259", o:["CFC (clorofluorcarbono)","gás carbônico (CO₂)","oxigênio","nitrogênio"], e:"O CFC era usado em geladeiras, ar-condicionado e isopor."},
+  {q:"O principal gás ligado à intensificação do efeito estufa é o:", ref:"pág. 261", o:["gás carbônico (CO₂)","ozônio","CFC","vapor de água"], e:"Ele é lançado pelas queimadas, pelas chaminés das fábricas e pela queima de combustíveis fósseis."}
+ ]
+},
+{
+ id:"g1", mod:7, tag:"7.1", color:"#FFD23F",
+ title:"Prever o tempo", pages:"Tempo, clima e meteorologia · págs. 232 a 235",
+ study:`
+<p class="book"><i class='ib'></i> Abertura: o furacão Catarina, no litoral de SC e RS, em 27 de março de 2004 (pág. 232)</p>
+<h3>Sabedoria popular</h3>
+<p class="book"><i class='ib'></i> Pág. 233</p>
+<p>Ditados como “Neblina baixa, Sol que racha” mostram que as pessoas observam sinais da natureza: o comportamento dos animais, as dores nas articulações quando vai chover, o ninho do <strong>joão-de-barro</strong> com a entrada voltada para o poente (sinal de inverno chuvoso). No Ceará, os <strong>“profetas da chuva”</strong> se reúnem há pelo menos 140 anos para prever o plantio.</p>
+<h3>Meteorologia</h3>
+<p><strong>Meteorologia</strong> é a ciência que estuda a atmosfera e seus fenômenos. Os dados vêm de estações meteorológicas, navios, boias, aeronaves, radares, balões e <strong>satélites</strong>, e são processados por <strong>supercomputadores</strong>. Prever o tempo ajuda a agricultura e alerta sobre enchentes, deslizamentos, furacões e nevascas.</p>
+<h3>Tempo e clima</h3>
+<p class="book"><i class='ib'></i> Págs. 234 e 235</p>
+<ul>
+<li><strong>Tempo</strong>: estado da atmosfera em um momento (“Domingo fez muito calor em Goiânia”).</li>
+<li><strong>Clima</strong>: estado da atmosfera durante um longo período, uma <strong>sucessão de tempos</strong>. Para definir o clima, analisa-se a média de cerca de <strong>30 anos</strong>.</li>
+</ul>
+<p>O Brasil é o país com <strong>maior incidência de raios</strong>: média de quase 80 milhões por ano (154 milhões em 2021).</p>
+<h3>Os 5 elementos do tempo e do clima</h3>
+<div class="tl">
+ <div><b>1 · Temperatura</b><span>calor ou frio do ar</span></div>
+ <div><b>2 · Pressão atmosférica</b><span>peso do ar</span></div>
+ <div><b>3 · Umidade do ar</b><span>vapor de água no ar</span></div>
+ <div><b>4 · Precipitação</b><span>chuva, neve, granizo</span></div>
+ <div><b>5 · Ventos</b><span>ar em movimento</span></div>
+</div>`,
+ quiz:[
+  {q:"A ciência que estuda a atmosfera e seus fenômenos é a:", ref:"pág. 233", o:["meteorologia","geologia","astronomia","cartografia"], e:"Os meteorologistas usam satélites, radares, balões e supercomputadores."},
+  {q:"Qual destas NÃO é uma fonte de dados usada pelos meteorologistas, segundo a apostila?", ref:"pág. 233", o:["Pluviômetro de brinquedo feito em casa","Satélites","Balões meteorológicos","Boias e navios"], e:"A apostila cita estações, navios, boias, aeronaves, radares, balões e satélites."},
+  {q:"Pela sabedoria popular, o ninho do joão-de-barro com a entrada voltada para o poente é sinal de:", ref:"pág. 233", o:["inverno chuvoso","verão muito seco","nevasca","furacão"], e:"É um exemplo de observação dos sinais da natureza."},
+  {q:"Tempo atmosférico é:", ref:"pág. 234", o:["o estado da atmosfera em um determinado momento","a média das condições da atmosfera em 30 anos","a camada de ar que envolve a Terra","o movimento do ar"], e:"Clima é o padrão de um longo período."},
+  {q:"Quantos são os elementos do tempo e do clima estudados?", ref:"pág. 235", o:["5: temperatura, pressão, umidade, precipitação e ventos","3: chuva, sol e vento","2: frio e calor","4: as quatro estações"], e:"São os dados que precisam ser coletados para analisar a atmosfera."},
+  {q:"Segundo o INPE, o Brasil é o país com:", ref:"pág. 234", o:["a maior incidência de raios do mundo","o maior número de furacões","a maior quantidade de neve","o menor número de tempestades"], e:"Em 2021 caíram 154 milhões de raios no território brasileiro."},
+  {q:"O único furacão registrado no Atlântico Sul, que atingiu SC e RS em 2004, foi o:", ref:"pág. 232", o:["Catarina","Wilma","Katrina","Andrés"], e:"A foto de satélite da abertura do módulo mostra o furacão Catarina."}
+ ]
+},
+{
+ id:"g2", mod:7, tag:"7.2", color:"#7FD3FF",
+ title:"Temperatura e pressão atmosférica", pages:"Elementos do tempo · págs. 235 a 237",
+ study:`
+<h3>Temperatura</h3>
+<p class="book"><i class='ib'></i> Pág. 235</p>
+<p>A <strong>temperatura</strong> é a medida da quantidade de calor na atmosfera, ou seja, o grau de agitação das moléculas do ar. Quanto <strong>maior a incidência da radiação solar</strong>, maior a agitação e maior a temperatura. É medida com o <strong>termômetro</strong>, em <strong>graus Celsius (°C)</strong>.</p>
+<div class="box">Os termômetros de rua ficam expostos ao sol e marcam mais que a temperatura real. Em 1º/2/2019, um deles mostrou 41 °C em São Paulo, mas a máxima oficial (INMET) foi de 35,5 °C.</div>
+<h3>Amplitude térmica</h3>
+<p class="book"><i class='ib'></i> Atividade 1, pág. 236</p>
+<p><strong>Amplitude térmica</strong> é a diferença entre a temperatura <strong>máxima</strong> e a <strong>mínima</strong>. É o “efeito cebola”: casaco de manhã, menos roupa à tarde e casaco de novo à noite.</p>
+<div class="trick"><strong>Como calcular:</strong> amplitude = máxima − mínima. Média do dia = (máxima + mínima) ÷ 2.<br>Ex.: máxima 21 °C e mínima 3 °C → amplitude 18 °C; média 12 °C.</div>
+<h3>Pressão atmosférica</h3>
+<p class="book"><i class='ib'></i> Pág. 236</p>
+<p>O ar fica preso ao planeta pela <strong>gravidade</strong>. A pressão atmosférica é o <strong>peso da camada de ar</strong> sobre um ponto da superfície. Quanto mais espessa a camada de ar, maior o peso e maior a pressão.</p>
+<div class="vs">
+ <div style="background:#DDEFFF;color:#1B1F3B">Litoral<span class="big">MAIS AR EM CIMA</span>pressão maior</div>
+ <div style="background:#FFF1C2;color:#1B1F3B">Alto da montanha<span class="big">MENOS AR EM CIMA</span>pressão menor</div>
+</div>
+<p>A pressão é medida em <strong>milibar (mb)</strong> com o <strong>barômetro</strong> (pág. 246).</p>`,
+ quiz:[
+  {q:"A temperatura é a medida:", ref:"pág. 235", o:["da quantidade de calor na atmosfera, ligada à agitação das moléculas do ar","do peso do ar sobre a superfície","da quantidade de vapor de água no ar","da quantidade de chuva"], e:"Quanto maior a incidência da radiação solar, maior a agitação e maior a temperatura."},
+  {q:"O aparelho que mede a temperatura e a unidade usada no Brasil são:", ref:"pág. 235", o:["termômetro e graus Celsius","barômetro e milibar","pluviômetro e milímetros","higrômetro e porcentagem"], e:"Cada elemento tem seu aparelho de medida."},
+  {q:"Amplitude térmica é:", ref:"pág. 236", o:["a diferença entre a temperatura máxima e a mínima","a temperatura média do dia","a temperatura mais alta do ano","o aumento da temperatura do planeta"], e:"É o “efeito cebola”: tira e põe casaco ao longo do dia."},
+  {ex:"Madri: terça 21 °C/3 °C · quarta 15 °C/8 °C · quinta 15 °C/1 °C · sexta 19 °C/0 °C · sábado 20 °C/3 °C", q:"Qual dia teve a maior amplitude térmica?", ref:"pág. 236", o:["Sexta (19 °C)","Terça (18 °C)","Sábado (17 °C)","Quarta (7 °C)"], e:"Sexta: 19 − 0 = 19 °C. Terça: 18. Sábado: 17. Quinta: 14. Quarta: 7."},
+  {ex:"Terça-feira em Madri: máxima de 21 °C e mínima de 3 °C.", q:"Qual foi a temperatura média do dia?", ref:"pág. 236", o:["12 °C","18 °C","24 °C","9 °C"], e:"(21 + 3) ÷ 2 = 12 °C."},
+  {q:"A pressão atmosférica está ligada:", ref:"pág. 236", o:["ao peso da camada de ar sobre um ponto da superfície","à quantidade de raios","à velocidade das correntes marítimas","ao calor do Sol"], e:"Quanto mais espessa a camada de ar, maior o peso e maior a pressão."},
+  {q:"Comparando uma cidade no litoral e o alto de uma montanha:", ref:"pág. 236", o:["a pressão é maior no litoral, pois a coluna de ar sobre ele é mais espessa","a pressão é maior no alto da montanha","a pressão é igual nos dois lugares","no litoral não há pressão atmosférica"], e:"Com o aumento da altitude, a pressão diminui."}
+ ]
+},
+{
+ id:"g3", mod:7, tag:"7.3", color:"#9EE6B8",
+ title:"Ventos e umidade do ar", pages:"Convecção, umidade, orvalho e geada · págs. 237 a 239",
+ study:`
+<h3>Ventos</h3>
+<p class="book"><i class='ib'></i> Pág. 237</p>
+<p>O <strong>vento</strong> é o movimento de grande quantidade de ar. O ar é formado principalmente por <strong>nitrogênio (78%)</strong> e <strong>oxigênio (21%)</strong>.</p>
+<ul>
+<li>O ar se move das áreas de <strong>alta pressão</strong> para as de <strong>baixa pressão</strong>. Quanto maior a diferença, mais forte o vento.</li>
+<li><strong>Ar frio</strong>: mais denso → alta pressão. <strong>Ar quente</strong>: menos denso → baixa pressão.</li>
+<li>O ar quente sobe e o ar frio ocupa o lugar dele, formando o vento. Esse movimento é a <strong>convecção</strong>.</li>
+</ul>
+<h3>Umidade do ar</h3>
+<p class="book"><i class='ib'></i> Pág. 238</p>
+<p>Quanto <strong>mais quente</strong> o ar, <strong>mais vapor de água</strong> ele pode conter. A <strong>umidade relativa</strong>, em porcentagem, mostra quanto vapor o ar tem em relação ao máximo possível naquela temperatura. Quando chega a <strong>100%</strong>, é o <strong>ponto de saturação</strong> e começa a condensação.</p>
+<ul>
+<li>Muito alta nas <strong>florestas tropicais</strong>; muito baixa nos <strong>desertos</strong> (Saara, Atacama) e nas áreas geladas.</li>
+<li>A OMS recomenda umidade entre <strong>50% e 60%</strong>. Ar seco causa ardência no nariz, tosse e dificuldade para engolir.</li>
+<li>Aparelho de medida: <strong>higrômetro</strong>.</li>
+</ul>
+<h3>Orvalho, geada, neblina e nevoeiro</h3>
+<p class="book"><i class='ib'></i> Saiba mais, pág. 239</p>
+<div class="tbl"><table>
+<tr><th>Fenômeno</th><th>Como se forma</th></tr>
+<tr><td><strong>Orvalho</strong></td><td>O vapor se condensa em gotas ao tocar superfícies frias (ponto de orvalho).</td></tr>
+<tr><td><strong>Geada</strong></td><td>O vapor passa <strong>direto do estado gasoso para o sólido</strong>. Pode matar as plantas.</td></tr>
+<tr><td><strong>Neblina</strong></td><td>Condensação perto do chão; visibilidade prejudicada a <strong>mais de 1 km</strong>.</td></tr>
+<tr><td><strong>Nevoeiro</strong></td><td>Condensação perto do chão; visibilidade a <strong>menos de 1 km</strong>.</td></tr>
+</table></div>
+<div class="trick"><strong>Pegadinha:</strong> orvalho, geada, neblina e nevoeiro <strong>NÃO são precipitação</strong>. Nada cai do céu: a água se forma perto da superfície.</div>`,
+ quiz:[
+  {q:"O vento é:", ref:"pág. 237", o:["o movimento de grande quantidade de ar","a quantidade de vapor de água no ar","o peso do ar","a queda de água das nuvens"], e:"O ar é formado principalmente por nitrogênio (78%) e oxigênio (21%)."},
+  {q:"O ar se movimenta:", ref:"pág. 237", o:["das áreas de alta pressão para as de baixa pressão","das áreas de baixa pressão para as de alta pressão","só de dia","só sobre o mar"], e:"Quanto maior a diferença de pressão, mais forte o vento."},
+  {q:"O ar quente sobe e o ar frio, mais denso, ocupa o lugar dele. Esse movimento se chama:", ref:"pág. 237", o:["convecção","condensação","precipitação","saturação"], e:"Ar frio = alta pressão; ar quente = baixa pressão."},
+  {q:"Quando a umidade relativa do ar chega a 100%, temos o:", ref:"pág. 238", o:["ponto de saturação","ponto de ebulição","ponto zero","ponto cardeal"], e:"A partir daí começa a condensação."},
+  {q:"Onde a umidade relativa do ar costuma ser muito baixa?", ref:"pág. 238", o:["Nos desertos, como o Saara e o Atacama","Nas florestas tropicais","Em Manaus no verão","Em Belém no verão"], e:"Nas florestas tropicais ela é muito elevada."},
+  {q:"O aparelho que mede a umidade do ar é o:", ref:"pág. 238", o:["higrômetro","pluviômetro","termômetro","barômetro"], e:"É usado até em museus e bibliotecas, para proteger objetos."},
+  {q:"A geada se forma quando:", ref:"pág. 239", o:["o vapor de água passa diretamente do estado gasoso para o sólido","a chuva congela antes de cair","a neblina baixa sobre a estrada","o vento sopra do mar"], e:"Ela pode congelar os tecidos das plantas e prejudicar a lavoura."},
+  {q:"Qual destes fenômenos NÃO é uma forma de precipitação?", ref:"pág. 239", o:["Nevoeiro","Chuva","Neve","Granizo"], e:"Orvalho, geada, neblina e nevoeiro resultam de condensação perto da superfície."}
+ ]
+},
+{
+ id:"g4", mod:7, tag:"7.4", color:"#FFB3C7",
+ title:"Furacões, tornados e precipitação", pages:"Fenômenos extremos e chuvas · págs. 239 a 241",
+ study:`
+<h3>Furacões e tornados</h3>
+<p class="book"><i class='ib'></i> Atividade 2, págs. 239 e 240</p>
+<p>Os dois são <strong>ciclones</strong>: ventos ascendentes de grande poder destrutivo.</p>
+<div class="vs">
+ <div style="background:#DDEFFF;color:#1B1F3B">Furacão<span class="big">SOBRE O OCEANO</span>águas quentes (cerca de 26,5 °C), centenas de km, dura até uma semana</div>
+ <div style="background:#FFE0EA;color:#1B1F3B">Tornado<span class="big">SOBRE A TERRA</span>encontro de ar quente e úmido com ar frio e seco, curta duração, difícil de prever</div>
+</div>
+<ul>
+<li>No oeste do Pacífico, os furacões são chamados de <strong>tufões</strong>.</li>
+<li>Os tornados são comuns nas <strong>planícies do centro dos Estados Unidos</strong>.</li>
+<li>O Brasil teve apenas <strong>um furacão</strong> (Catarina, março de 2004), mas registra até <strong>200 tornados por ano</strong>, segundo o INPE.</li>
+</ul>
+<h3>Precipitações</h3>
+<p class="book"><i class='ib'></i> Págs. 240 e 241</p>
+<p>Chuva, neve, granizo e garoa são <strong>precipitações</strong>: a água volta ao solo depois da <strong>condensação</strong> (vapor → líquido).</p>
+<div class="tl">
+ <div><b>1 · Condensação</b><span>O vapor de água vira gotículas ao redor de partículas de poeira: formam-se as nuvens.</span></div>
+ <div><b>2 · Gotas pesadas</b><span>As gotículas crescem e ficam pesadas.</span></div>
+ <div><b>3 · Precipitação</b><span>A gravidade faz a água cair. Abaixo de 0 °C, pode começar como cristais de neve ou gelo.</span></div>
+</div>
+<p>A chuva excessiva causa enxurradas e erosão; a neve pode quebrar galhos e fios. A quantidade de chuva (<strong>índice pluviométrico</strong>) é medida com o <strong>pluviômetro</strong>, em <strong>milímetros (mm)</strong>.</p>`,
+ quiz:[
+  {q:"Furacões se formam:", ref:"pág. 239", o:["sobre oceanos de águas quentes, em torno de 26,5 °C","nas planícies do centro dos Estados Unidos","só no inverno","sobre desertos"], e:"Neles a evaporação é alta e a umidade forma tempestades enormes."},
+  {q:"Os tornados diferem dos furacões por serem:", ref:"pág. 240", o:["ventos de curta duração e difíceis de prever","fenômenos que só acontecem no mar","ventos fracos","chuvas de granizo"], e:"Os furacões podem durar até uma semana."},
+  {q:"No oeste do Pacífico, os furacões são chamados de:", ref:"pág. 239", o:["tufões","tornados","monções","friagens"], e:"Furacões e tufões são o mesmo fenômeno com nomes diferentes."},
+  {q:"Sobre o Brasil, é correto afirmar:", ref:"pág. 240", o:["teve apenas um furacão registrado, mas tem até 200 tornados por ano","nunca teve tornados","tem dezenas de furacões por ano","não tem ciclones"], e:"O furacão foi o Catarina, em março de 2004."},
+  {q:"A precipitação acontece depois da:", ref:"pág. 240", o:["condensação do vapor de água na atmosfera","evaporação dos rios","formação de geada","passagem de uma corrente marítima"], e:"As gotículas se juntam em volta de partículas de poeira e formam as nuvens."},
+  {q:"O aparelho que mede a quantidade de chuva e sua unidade são:", ref:"pág. 241", o:["pluviômetro e milímetros (mm)","higrômetro e porcentagem","barômetro e milibar","termômetro e graus Celsius"], e:"A quantidade de precipitação é o índice pluviométrico."},
+  {q:"Uma consequência da chuva excessiva é:", ref:"pág. 241", o:["enxurradas e erosão, que danificam os campos","o aumento da umidade relativa no deserto","a formação de geada","o fim das estações do ano"], e:"Chuva e chuvisco costumam ser bons para as plantas, mas o excesso faz estragos."}
+ ]
+},
+{
+ id:"g5", mod:7, tag:"7.5", color:"#C9B6FF",
+ title:"Os três tipos de chuva", pages:"Convectiva, frontal e orográfica · pág. 242",
+ study:`
+<p class="book"><i class='ib'></i> Esquema “Tipos de chuva”, pág. 242</p>
+<div class="tbl"><table>
+<tr><th>Tipo</th><th>Como acontece</th><th>Onde é comum</th></tr>
+<tr><td><strong>1 · Convectiva</strong></td><td>O ar quente sobe, esfria no alto e forma nuvens <strong>cúmulo-nimbo</strong> (em forma de bigorna). Fortes pancadas.</td><td>Amazônia e verão do Sudeste</td></tr>
+<tr><td><strong>2 · Frontal</strong></td><td>Uma massa de <strong>ar frio</strong> encontra uma massa de <strong>ar quente e úmido</strong>. Chove na área de contato.</td><td>Sul do Brasil</td></tr>
+<tr><td><strong>3 · Orográfica</strong> (de relevo ou de barreira)</td><td>O ar úmido do mar é <strong>barrado pelo relevo</strong>, sobe, esfria e chove.</td><td>Litoral: serra do Mar e planalto da Borborema</td></tr>
+</table></div>
+<div class="vs">
+ <div style="background:#DDEFFF;color:#1B1F3B">Barlavento<span class="big">COM CHUVA</span>o lado da montanha virado para o vento úmido</div>
+ <div style="background:#FFF1C2;color:#1B1F3B">Sotavento<span class="big">SEM CHUVA</span>o outro lado, mais seco</div>
+</div>
+<div class="trick"><strong>Truque:</strong> <strong>con</strong>vectiva = <strong>calor</strong> que sobe. <strong>Fron</strong>tal = <strong>encontro</strong> de massas (frente). <strong>Oro</strong>gráfica = <strong>montanha</strong> no caminho.</div>`,
+ quiz:[
+  {q:"Quantos e quais são os principais tipos de chuva?", ref:"pág. 242", o:["Três: convectiva, frontal e orográfica","Dois: forte e fraca","Quatro: chuva, neve, granizo e garoa","Três: orvalho, geada e neblina"], e:"Chuva, neve e granizo são formas de precipitação, não tipos de chuva."},
+  {q:"A chuva convectiva se caracteriza:", ref:"pág. 242", o:["pela ascensão do ar quente, formando nuvens cúmulo-nimbo e fortes pancadas","pelo encontro de duas massas de ar","pelo relevo que barra o vento úmido","por ser fraca e durar dias"], e:"É comum na Amazônia e no verão do Sudeste."},
+  {q:"A chuva frontal é comum no Sul do Brasil e acontece quando:", ref:"pág. 242", o:["uma massa de ar frio encontra uma massa de ar quente e úmido","o ar quente sobe por causa do calor","o relevo barra o ar úmido do mar","a temperatura cai abaixo de 0 °C"], e:"Chove na área de contato entre as duas massas de ar."},
+  {q:"A chuva orográfica, típica da serra do Mar, também é chamada de:", ref:"pág. 242", o:["chuva de relevo ou chuva de barreira","chuva de verão","chuva ácida","chuva de granizo"], e:"O ar úmido do Atlântico é barrado pelo relevo."},
+  {q:"Na chuva orográfica, o lado da montanha onde chove é o:", ref:"pág. 242", o:["barlavento","sotavento","equador","trópico"], e:"O ar perde umidade e chega seco ao sotavento."},
+  {ex:"O vento úmido vem do mar, encontra a montanha, sobe, esfria e chove. Do outro lado, o ar desce seco.", q:"Esse esquema mostra uma chuva:", ref:"pág. 252", o:["orográfica, pois o relevo barrou o ar úmido","frontal, resultante do contato do ar úmido com a montanha fria","convectiva, pois o ar quente subiu sozinho","de granizo"], e:"É a questão 2 do Teste da pág. 252."}
+ ]
+},
+{
+ id:"g6", mod:7, tag:"7.6", color:"#FFC98A",
+ title:"Latitude e altitude", pages:"Fatores do tempo e do clima · págs. 242 a 244",
+ study:`
+<h3>Fatores do tempo e do clima</h3>
+<p class="book"><i class='ib'></i> Pág. 242</p>
+<p>São o que <strong>influencia</strong> os elementos: <strong>latitude</strong>, <strong>altitude</strong>, <strong>massas de ar</strong>, <strong>correntes marítimas</strong>, <strong>maritimidade</strong> e <strong>continentalidade</strong>.</p>
+<div class="trick"><strong>Não confunda:</strong> <strong>elementos</strong> são o que se mede (temperatura, pressão, umidade, precipitação, ventos). <strong>Fatores</strong> são o que muda esses elementos (latitude, altitude, massas de ar…).</div>
+<h3>Latitude</h3>
+<p class="book"><i class='ib'></i> Págs. 242 e 243</p>
+<p>A latitude é a distância até a linha do <strong>equador</strong>. Por causa da curvatura da Terra, quanto <strong>maior a latitude</strong>, mais <strong>inclinados</strong> chegam os raios solares e <strong>menos energia</strong> (calor) eles trazem. Por isso o planeta tem <strong>zonas climáticas</strong>:</p>
+<div class="pyr">
+ <div style="width:46%;background:#FFFFFF">Glacial ou polar</div>
+ <div style="width:73%;background:#FFC98A">Temperada</div>
+ <div style="width:100%;background:#FF9EC0">Tropical (perto do equador)</div>
+</div>
+<h3>Altitude</h3>
+<p class="book"><i class='ib'></i> Pág. 243</p>
+<ul>
+<li>Na troposfera, a <strong>temperatura e a pressão diminuem</strong> quando a altitude <strong>aumenta</strong>.</li>
+<li>Por isso existem <strong>neves eternas</strong> em montanhas altas, mesmo na zona tropical, como o Pico Colón (Colômbia, 5 775 m).</li>
+<li>O relevo alto também pode <strong>barrar a umidade</strong> e formar desertos, como o Vale da Morte (EUA).</li>
+</ul>
+<div class="box"><strong>Atividade 3 (pág. 244):</strong> Brasília 20 °C, Cuzco (Peru) 9 °C, Salvador 25 °C. Estão em latitudes próximas, mas <strong>Cuzco</strong>, nos Andes, tem a maior altitude e por isso é a mais fria.</div>`,
+ quiz:[
+  {q:"Qual destes é um FATOR do clima, e não um elemento?", ref:"pág. 242", o:["Latitude","Temperatura","Umidade do ar","Precipitação"], e:"Fatores: latitude, altitude, massas de ar, correntes marítimas, maritimidade e continentalidade."},
+  {q:"Quanto maior a latitude de um lugar:", ref:"pág. 243", o:["mais inclinados chegam os raios solares e menor a energia recebida","mais perto ele fica do equador","mais quente ele é","maior é a altitude"], e:"Por isso as zonas polares são as mais frias."},
+  {q:"As três zonas climáticas da Terra são:", ref:"pág. 243", o:["glacial ou polar, temperada e tropical","equatorial, desértica e de montanha","quente, fria e chuvosa","norte, sul e centro"], e:"Veja o mapa “Mundo: zonas climáticas”, na pág. 243."},
+  {q:"Na troposfera, quando a altitude aumenta:", ref:"pág. 243", o:["a temperatura e a pressão diminuem","a temperatura e a pressão aumentam","a temperatura aumenta e a pressão diminui","nada muda"], e:"Por isso há neves eternas em montanhas altas, mesmo nos trópicos."},
+  {ex:"Brasília: 20 °C · Cuzco (Peru): 9 °C · Salvador: 25 °C — cidades em latitudes próximas.", q:"Qual cidade está em maior altitude?", ref:"pág. 244", o:["Cuzco","Salvador","Brasília","Todas na mesma altitude"], e:"Cuzco fica nos Andes. Quanto mais alto, mais frio."},
+  {q:"O Vale da Morte, nos EUA, é muito seco porque:", ref:"pág. 243", o:["as montanhas ao redor formam uma barreira que impede a chuva de chegar","fica no Polo Norte","está no meio do oceano","recebe a chuva frontal todos os dias"], e:"O relevo elevado pode barrar a umidade e formar desertos."}
+ ]
+},
+{
+ id:"g7", mod:7, tag:"7.7", color:"#FFD23F",
+ title:"Massas de ar e correntes marítimas", pages:"Frentes, friagem e correntes · págs. 245 a 247",
+ study:`
+<h3>Massas de ar</h3>
+<p class="book"><i class='ib'></i> Pág. 245</p>
+<p><strong>Massas de ar</strong> são grandes porções da atmosfera que guardam as características do lugar de origem: <strong>temperatura, pressão e umidade</strong>.</p>
+<ul>
+<li>As massas <strong>frias</strong> tendem a ir em direção ao <strong>equador</strong>; as <strong>quentes</strong>, em direção aos <strong>polos</strong>. Assim, ajudam a equilibrar as temperaturas do planeta.</li>
+<li><strong>Frente</strong>: a fronteira entre duas massas de ar de características diferentes. A frente fria é mais comum no Sul e no Sudeste.</li>
+<li><strong>Friagem</strong>: queda brusca de temperatura no Norte, causada por massa de ar polar. Pode derrubar a temperatura em até 10 °C em uma hora. Em abril de 2016, a Amazônia chegou a 15 °C, bem abaixo da média de 27 °C.</li>
+</ul>
+<h3>Correntes marítimas</h3>
+<p class="book"><i class='ib'></i> Págs. 246 e 247 (mapa “Mundo: correntes marítimas”)</p>
+<p>O vento e as diferenças de temperatura e de salinidade movem grandes porções de água dos oceanos: são as <strong>correntes marítimas</strong>.</p>
+<div class="vs">
+ <div style="background:#FFE0EA;color:#1B1F3B">Correntes quentes<span class="big">MAIS UMIDADE</span>formam-se em águas tropicais; deixam o litoral mais úmido, com nevoeiros (ex.: corrente do Golfo, noroeste da Europa)</div>
+ <div style="background:#DDEFFF;color:#1B1F3B">Correntes frias<span class="big">MAIS PEIXE, MENOS CHUVA</span>vêm de perto dos polos; trazem nutrientes (zonas pesqueiras) e formam desertos (ex.: Humboldt e o Atacama)</div>
+</div>`,
+ quiz:[
+  {q:"Massas de ar são:", ref:"pág. 245", o:["grandes porções da atmosfera que guardam as características do lugar de origem","correntes de água dos oceanos","nuvens de chuva","ventos que sopram só à noite"], e:"Elas carregam temperatura, pressão e umidade de onde se formaram."},
+  {q:"Quando duas massas de ar de características diferentes se encontram, forma-se uma:", ref:"pág. 245", o:["frente","ilha de calor","corrente marítima","zona climática"], e:"A frente é a fronteira entre as duas massas de ar."},
+  {q:"A friagem, comum na região Norte, é:", ref:"pág. 245", o:["uma queda brusca de temperatura causada por uma massa de ar polar","uma onda de calor","uma chuva de granizo","a seca do inverno"], e:"Em 2016, a temperatura na Amazônia caiu para 15 °C, bem abaixo da média de 27 °C."},
+  {q:"Em geral, as massas de ar frias tendem a seguir em direção:", ref:"pág. 245", o:["à linha do equador","aos polos","ao centro dos continentes apenas","ao fundo do oceano"], e:"E as quentes vão para os polos: isso ajuda a equilibrar as temperaturas."},
+  {q:"As correntes marítimas frias:", ref:"pág. 247", o:["trazem nutrientes e formam importantes zonas pesqueiras","deixam o litoral mais chuvoso","formam-se em águas tropicais","provocam furacões"], e:"Também estão ligadas a desertos costeiros, como o Atacama."},
+  {q:"No Chile, a corrente de Humboldt está relacionada:", ref:"pág. 247", o:["à formação do deserto do Atacama, por ser uma corrente fria","às chuvas da Amazônia, por ser quente","aos nevoeiros das Ilhas Britânicas","à friagem"], e:"Correntes frias dificultam a formação de chuvas no litoral."},
+  {q:"A corrente do Golfo, quente, provoca:", ref:"pág. 253", o:["nevoeiros no litoral noroeste da Europa","o deserto do Atacama","a friagem na Amazônia","baixas temperaturas no Ártico"], e:"Correntes quentes deixam as zonas costeiras mais úmidas."}
+ ]
+},
+{
+ id:"g8", mod:7, tag:"7.8", color:"#7FD3FF",
+ title:"Maritimidade, brisas e climas do mundo", pages:"Págs. 249 a 251",
+ study:`
+<h3>Maritimidade e continentalidade</h3>
+<p class="book"><i class='ib'></i> Pág. 249</p>
+<p>A <strong>terra</strong> aquece e esfria <strong>rápido</strong>; a <strong>água</strong> mantém a temperatura por mais tempo.</p>
+<div class="vs">
+ <div style="background:#DDEFFF;color:#1B1F3B">Maritimidade<span class="big">PERTO DO MAR</span>clima mais ameno, menor amplitude térmica, mais umidade</div>
+ <div style="background:#FFF1C2;color:#1B1F3B">Continentalidade<span class="big">LONGE DO MAR</span>clima mais rigoroso, maior amplitude térmica, mais seco</div>
+</div>
+<h3>Brisas</h3>
+<div class="tbl"><table>
+<tr><th>Brisa</th><th>Quando</th><th>Para onde sopra</th><th>Por quê</th></tr>
+<tr><td><strong>Marítima</strong></td><td>Durante o <strong>dia</strong></td><td>Do <strong>mar</strong> para o continente</td><td>A terra está mais quente: o ar dela sobe e o ar do mar ocupa o espaço.</td></tr>
+<tr><td><strong>Terrestre</strong></td><td>Durante a <strong>noite</strong></td><td>Do <strong>continente</strong> para o mar</td><td>A água está mais quente que a terra: o ar sobre o mar sobe.</td></tr>
+</table></div>
+<p>Os jangadeiros aproveitam o vento da noite para sair e o do dia para voltar.</p>
+<h3>Climas do mundo</h3>
+<p class="book"><i class='ib'></i> Págs. 249 a 251</p>
+<ul>
+<li><strong>Entre os trópicos</strong>: em geral quentes, com climas úmidos, semiáridos ou com estações seca e úmida. Ex.: o clima <strong>equatorial</strong> de Manaus é quente e muito úmido, com baixa amplitude térmica.</li>
+<li><strong>Temperado</strong>: as <strong>quatro estações</strong> bem definidas.</li>
+<li><strong>Frio e polar</strong>: temperaturas negativas na maior parte do ano.</li>
+<li><strong>Desértico</strong>: pouquíssima chuva; pode ser quente ou frio.</li>
+<li><strong>Altas montanhas</strong>: o clima muda em faixas (andares), conforme a altitude.</li>
+</ul>
+<div class="box">Recordes: maior temperatura, 56,7 °C no Vale da Morte (EUA, 1913); menor, −89,2 °C na estação Vostok (Antártida, 1983). As <strong>monções</strong> do sul da Ásia trazem chuvas torrenciais no verão.</div>`,
+ quiz:[
+  {q:"A maritimidade faz com que o clima perto do mar seja:", ref:"pág. 249", o:["mais ameno, com menor amplitude térmica","mais rigoroso, com grande amplitude térmica","sempre gelado","sem nenhuma chuva"], e:"A água mantém a temperatura por mais tempo que a terra."},
+  {q:"As áreas no interior dos continentes, por causa da continentalidade, apresentam:", ref:"pág. 254", o:["maior amplitude térmica","menor amplitude térmica","neve o ano todo","brisa marítima constante"], e:"A terra aquece e esfria rapidamente."},
+  {q:"A brisa marítima sopra:", ref:"pág. 249", o:["durante o dia, do mar para o continente","durante a noite, do continente para o mar","só no inverno","do continente para o mar durante o dia"], e:"De dia a terra está mais quente: o ar dela sobe e o ar do mar ocupa o espaço."},
+  {q:"A brisa terrestre sopra:", ref:"pág. 249", o:["durante a noite, do continente para o mar","durante o dia, do mar para o continente","sempre do norte","só nas montanhas"], e:"À noite a água está mais quente que a terra."},
+  {q:"O clima temperado se caracteriza por:", ref:"pág. 251", o:["apresentar as quatro estações do ano bem definidas","ser quente e úmido o ano todo","ter temperaturas negativas quase o ano inteiro","ter pouquíssima chuva"], e:"Primavera florida, verão quente, outono com folhas caindo e inverno com neve."},
+  {q:"O clima equatorial, como o de Manaus, é:", ref:"pág. 250", o:["quente e muito úmido, com baixa amplitude térmica","frio e seco","desértico","temperado"], e:"Veja o climograma de Manaus na pág. 250."},
+  {q:"Nas altas montanhas, o clima:", ref:"pág. 249", o:["muda em faixas ou andares, de acordo com a altitude","é sempre igual do pé ao topo","é sempre tropical","é igual ao do deserto"], e:"Quanto mais alto, mais frio."}
+ ]
+},
+{
+ id:"a1", mod:8, tag:"8.1", color:"#9EE6B8",
+ title:"Dinâmica terrestre e ação humana", pages:"Mudanças naturais e poluição · págs. 255 a 257",
+ study:`
+<h3>Dinâmica terrestre</h3>
+<p class="book"><i class='ib'></i> Pág. 256</p>
+<ul>
+<li>Desde que se formou, há <strong>4,6 bilhões de anos</strong>, a Terra alternou períodos de resfriamento e aquecimento.</li>
+<li>Nos últimos 2 milhões de anos houve <strong>períodos glaciais</strong> (frios, com expansão das geleiras) e <strong>interglaciais</strong> (mais quentes, com degelo e subida do mar).</li>
+<li>Perto do equador, alternaram-se períodos <strong>chuvosos e secos</strong> (pluviais e interpluviais).</li>
+<li>Essas mudanças eram <strong>naturais</strong>. Nas últimas décadas, algumas alterações passaram a ser causadas pela <strong>ação humana</strong>.</li>
+</ul>
+<h3>Ação antrópica</h3>
+<p class="book"><i class='ib'></i> Pág. 257</p>
+<p><strong>Antrópico</strong> = causado pelo ser humano. A principal causa das mudanças climáticas atuais é a queima de <strong>combustíveis fósseis</strong> (carvão mineral, gás natural e petróleo).</p>
+<div class="vs">
+ <div style="background:#DDEFFF;color:#1B1F3B">Na cidade<span class="big">FUMAÇA</span>fábricas, carros, caminhões e ônibus, lixo e incineração de lixo hospitalar</div>
+ <div style="background:#DDF7EC;color:#1B1F3B">No campo<span class="big">QUEIMA</span>agrotóxicos pulverizados por aviões e queima da vegetação para agricultura e pastagem</div>
+</div>
+<p>A poluição prejudica a saúde e o meio ambiente e pode mudar o clima de um município, de uma região ou do planeta todo.</p>`,
+ quiz:[
+  {q:"Os períodos glaciais da história da Terra foram períodos:", ref:"pág. 256", o:["frios, com expansão das geleiras","quentes, com degelo","de muitos furacões","sem atmosfera"], e:"Nos interglaciais, mais quentes, o gelo derretia e o mar subia."},
+  {q:"As mudanças de temperatura que a Terra sofreu ao longo de bilhões de anos foram causadas por:", ref:"pág. 256", o:["fatores naturais","fábricas e carros","queimadas na Amazônia","CFC das geladeiras"], e:"Só nas últimas décadas a ação humana passou a alterar o clima."},
+  {q:"“Ação antrópica” significa ação:", ref:"pág. 257", o:["do ser humano","dos vulcões","do Sol","dos oceanos"], e:"É o que estamos causando no clima hoje."},
+  {q:"Segundo a apostila, a principal causa das mudanças climáticas atuais é:", ref:"pág. 257", o:["a queima de combustíveis fósseis","a erupção de vulcões","o movimento das placas","o aumento das geleiras"], e:"Combustíveis fósseis: carvão mineral, gás natural e petróleo."},
+  {q:"Qual destes é um combustível fóssil?", ref:"pág. 257", o:["Petróleo","Vento","Energia solar","Lenha de reflorestamento"], e:"Formado pela decomposição de matéria orgânica há milhões de anos."},
+  {q:"Nas áreas rurais, a poluição do ar é causada principalmente:", ref:"pág. 257", o:["pelos agrotóxicos pulverizados e pela queima da vegetação","pelos engarrafamentos","pelas chaminés das fábricas","pela incineração de lixo hospitalar"], e:"Na cidade, os vilões são fábricas, veículos e lixo."}
+ ]
+},
+{
+ id:"a2", mod:8, tag:"8.2", color:"#FFB3C7",
+ title:"Ilhas de calor", pages:"Efeitos locais da ação humana · págs. 257, 258 e 270",
+ study:`
+<p class="book"><i class='ib'></i> Infográfico das págs. 257 e 258</p>
+<p>Nas cidades, algumas áreas, geralmente o <strong>centro</strong>, ficam com temperaturas médias mais altas que as áreas vizinhas. Esse fenômeno se chama <strong>ilha de calor</strong>.</p>
+<h3>O que causa</h3>
+<ul>
+<li>Retirada da <strong>vegetação</strong>.</li>
+<li><strong>Impermeabilização</strong> do solo com asfalto e concreto.</li>
+<li>Prédios que dificultam a <strong>circulação do ar</strong>.</li>
+<li><strong>Poluição</strong>, veículos e muitas pessoas.</li>
+</ul>
+<h3>O que acontece</h3>
+<p>O ar quente sobe sobre a cidade. Quando a brisa marítima encontra essa área aquecida, pode formar <strong>tempestades</strong>. Sem vegetação, o solo absorve menos água e as ruas <strong>alagam</strong>.</p>
+<div class="box"><strong>Como diminuir (pág. 270):</strong> aumentar as áreas arborizadas. Plantar 25% a mais de árvores pela cidade pode baixar a temperatura em 2,5 a 3 graus e melhorar o <strong>conforto térmico</strong>.</div>`,
+ quiz:[
+  {q:"Ilha de calor é:", ref:"pág. 258", o:["uma área urbana com temperaturas médias mais altas que as áreas vizinhas","uma ilha vulcânica","uma praia muito quente","um deserto"], e:"Em geral fica no centro das grandes cidades."},
+  {q:"Qual destas ações contribui para formar ilhas de calor?", ref:"pág. 258", o:["Cobrir o solo com asfalto e concreto","Plantar árvores","Criar parques","Preservar rios"], e:"A impermeabilização e a falta de vegetação aquecem a cidade."},
+  {q:"Uma consequência das ilhas de calor é:", ref:"pág. 258", o:["a formação de tempestades e alagamentos","a formação de geada","o aumento do gelo nos polos","a diminuição da temperatura"], e:"O ar quente sobe e, com a brisa marítima, pode formar tempestades."},
+  {q:"Para diminuir a temperatura das cidades, os pesquisadores sugerem:", ref:"pág. 270", o:["aumentar as áreas arborizadas","asfaltar mais ruas","construir prédios mais altos","cortar as árvores"], e:"Plantar 25% a mais de árvores pode reduzir a temperatura em 2,5 a 3 graus."},
+  {q:"As ilhas de calor são um exemplo de:", ref:"pág. 257", o:["efeito local da ação humana sobre o clima","fenômeno natural dos desertos","corrente marítima","massa de ar polar"], e:"As mudanças climáticas não vêm só da emissão de gases."}
+ ]
+},
+{
+ id:"a3", mod:8, tag:"8.3", color:"#C9B6FF",
+ title:"Camada de ozônio", pages:"O escudo contra o ultravioleta · págs. 258 a 260",
+ study:`
+<h3>O que é</h3>
+<p class="book"><i class='ib'></i> Pág. 258</p>
+<p>O ozônio é um gás raro na atmosfera (0,00006%). Fica concentrado numa camada fina na <strong>estratosfera</strong>, a cerca de <strong>32 km</strong> de altitude, e <strong>filtra os raios ultravioleta</strong> do Sol, nocivos à saúde.</p>
+<h3>O “buraco”</h3>
+<p class="book"><i class='ib'></i> Págs. 258 e 259</p>
+<ul>
+<li>No fim dos anos 1970, cientistas detectaram falhas (“buracos”) na camada sobre a <strong>Antártida</strong>, onde nem há fontes de poluição: a dinâmica da atmosfera leva os gases para longe.</li>
+<li>O culpado é o <strong>CFC (clorofluorcarbono)</strong>, usado em geladeiras, ar-condicionado e isopor. Ele sobe até a estratosfera, reage com o ozônio e o destrói.</li>
+</ul>
+<h3>Consequências dos raios ultravioleta</h3>
+<ul>
+<li>Doenças nos <strong>olhos</strong> e na <strong>pele</strong>.</li>
+<li>Queda na <strong>produtividade agrícola</strong>.</li>
+<li>Ameaça aos <strong>plânctons</strong>, base da cadeia alimentar marinha, que absorvem CO₂.</li>
+</ul>
+<h3>A solução</h3>
+<div class="box">Em <strong>1987</strong>, cerca de 150 países assinaram o <strong>Protocolo de Montreal</strong> para eliminar o CFC. O Brasil é referência no cumprimento do acordo. O buraco atingiu sua maior extensão em <strong>2006</strong> (Atividade 1, pág. 260) e hoje é menor; espera-se que a camada se recupere em algumas décadas.</div>`,
+ quiz:[
+  {q:"A camada de ozônio fica:", ref:"pág. 258", o:["na estratosfera, a cerca de 32 km de altitude","na superfície dos oceanos","dentro das nuvens de chuva","no centro da Terra"], e:"É uma camada fina de um gás raro na atmosfera."},
+  {q:"A função da camada de ozônio é:", ref:"pág. 258", o:["filtrar os raios ultravioleta do Sol","produzir chuva","reter o calor da Terra","formar os ventos"], e:"Reter calor é o papel do efeito estufa."},
+  {q:"O “buraco” na camada de ozônio foi descoberto sobre:", ref:"pág. 258", o:["a Antártida","a Amazônia","o deserto do Saara","a cidade de São Paulo"], e:"A dinâmica da atmosfera leva os gases para longe de onde são produzidos."},
+  {q:"O gás que destrói a camada de ozônio é o CFC, usado em:", ref:"pág. 259", o:["geladeiras, ar-condicionado e isopor","carros a gasolina","usinas hidrelétricas","plantações de cana"], e:"CFC = clorofluorcarbono."},
+  {q:"Uma consequência da passagem de mais raios ultravioleta é:", ref:"pág. 259", o:["doenças nos olhos e na pele","aumento das geleiras","mais geada","menos furacões"], e:"Também prejudica a agricultura e os plânctons."},
+  {q:"O acordo de 1987 para eliminar o CFC se chama:", ref:"pág. 259", o:["Protocolo de Montreal","Acordo de Paris","Édito de Milão","Protocolo de Kyoto"], e:"Cerca de 150 países assinaram; o Brasil é referência no cumprimento."},
+  {q:"A redução da camada de ozônio prejudica as plantas porque:", ref:"pág. 269", o:["a grande quantidade de raios ultravioleta atrapalha o desenvolvimento e a fotossíntese","aumenta a quantidade de chuva","esfria o planeta","não causa nenhum dano"], e:"É a questão 1 do Teste da pág. 269."}
+ ]
+},
+{
+ id:"a4", mod:8, tag:"8.4", color:"#FFC98A",
+ title:"Efeito estufa e aquecimento global", pages:"Págs. 261 a 264",
+ study:`
+<h3>Efeito estufa natural</h3>
+<p class="book"><i class='ib'></i> Esquema da pág. 261</p>
+<p>A Terra absorve a radiação do Sol e a devolve como calor. Uma camada de <strong>gases e poeira</strong> segura parte desse calor perto da superfície. É o <strong>efeito estufa</strong>, que mantém a média em cerca de <strong>15 °C</strong>. Sem ele, seria cerca de <strong>−17 °C</strong>.</p>
+<h3>Efeito estufa intensificado</h3>
+<p class="book"><i class='ib'></i> Págs. 261 e 262</p>
+<p>A emissão exagerada de <strong>gás carbônico (CO₂)</strong> por queimadas, chaminés das fábricas e queima de combustíveis fósseis (gasolina, óleo diesel) engrossa a camada de gases. Menos calor escapa para o espaço e a temperatura sobe: é o <strong>aquecimento global</strong>. O gráfico da pág. 262 mostra que a temperatura média e as emissões de CO₂ subiram juntas desde 1900.</p>
+<h3>Quem mais emite</h3>
+<p class="book"><i class='ib'></i> Págs. 263 e 264</p>
+<div class="tbl"><table>
+<tr><th>Posição (2018)</th><th>País</th><th>Gases emitidos</th></tr>
+<tr><td>1º</td><td>China</td><td>11,71 bilhões de toneladas</td></tr>
+<tr><td>2º</td><td>Estados Unidos</td><td>5,79 bilhões</td></tr>
+<tr><td>3º</td><td>Índia</td><td>3,35 bilhões</td></tr>
+<tr><td>6º</td><td>Brasil</td><td>1,42 bilhão</td></tr>
+</table></div>
+<p>A maior parte das emissões vem de poucos países, sobretudo os mais industrializados. <strong>Por habitante</strong>, as emissões são maiores na América do Norte, na Europa e na Oceania.</p>`,
+ quiz:[
+  {q:"O efeito estufa natural é importante porque:", ref:"pág. 261", o:["mantém a temperatura média da Terra em torno de 15 °C","filtra os raios ultravioleta","produz o oxigênio","forma as correntes marítimas"], e:"Sem ele, a média seria cerca de −17 °C."},
+  {q:"O aquecimento global acontece porque:", ref:"pág. 262", o:["o efeito estufa foi intensificado pela emissão de gases poluentes","a camada de ozônio aumentou","o Sol ficou mais perto da Terra","as geleiras cresceram"], e:"Com mais gases, menos calor escapa para o espaço."},
+  {q:"Qual destas atividades emite gás carbônico e intensifica o efeito estufa?", ref:"pág. 261", o:["Queima de gasolina e diesel nos veículos","Plantio de árvores","Uso de energia solar","Coleta de lixo reciclável"], e:"Também as queimadas e as chaminés das fábricas."},
+  {q:"No gráfico de 1900 a 2021 (pág. 262), é possível perceber que:", ref:"pág. 262", o:["as emissões de CO₂ e a temperatura média subiram juntas","a temperatura caiu","as emissões diminuíram","não há relação entre emissões e temperatura"], e:"Os anos mais quentes que a média aparecem em vermelho."},
+  {q:"O país que mais emitiu gases do efeito estufa em 2018 foi:", ref:"pág. 263", o:["China","Brasil","Estados Unidos","Canadá"], e:"11,71 bilhões de toneladas. Os EUA ficaram em 2º."},
+  {q:"Na lista dos maiores emissores de 2018, o Brasil aparece em:", ref:"pág. 263", o:["6º lugar","1º lugar","10º lugar","não aparece"], e:"Com 1,42 bilhão de toneladas."},
+  {q:"As regiões com altos níveis de emissão de CO₂ por habitante são:", ref:"pág. 264", o:["América do Norte, Europa e Oceania","África e América do Sul","Antártida e Ártico","apenas a Ásia"], e:"São regiões com muitos países ricos e industrializados."}
+ ]
+},
+{
+ id:"a5", mod:8, tag:"8.5", color:"#7FD3FF",
+ title:"Consequências: degelo e nível do mar", pages:"Págs. 265 a 269",
+ study:`
+<h3>O que pode acontecer</h3>
+<p class="book"><i class='ib'></i> Pág. 265 (IPCC)</p>
+<p>O IPCC, painel de cientistas da ONU, prevê que a temperatura média pode subir cerca de <strong>1,5 °C até 2040</strong> e mais de <strong>5 °C até 2100</strong> em algumas regiões. Consequências possíveis:</p>
+<ul>
+<li>Áreas úmidas virando secas, prejudicando a <strong>agricultura</strong>.</li>
+<li>Mais <strong>tempestades, furacões e tornados</strong>.</li>
+<li><strong>Extinção</strong> de espécies animais e vegetais (ex.: urso-polar).</li>
+<li><strong>Derretimento do gelo</strong> polar, alterando as correntes marítimas.</li>
+<li><strong>Elevação do nível do mar</strong>.</li>
+</ul>
+<h3>Degelo</h3>
+<p class="book"><i class='ib'></i> Págs. 265 a 267</p>
+<p>As imagens de satélite de 1984 e 2019 mostram a diminuição do gelo no <strong>Ártico</strong>. A <strong>Antártida</strong> já perde 6 vezes mais gelo que em 1979.</p>
+<div class="box"><strong>Por que acelera (pág. 267):</strong> o gelo reflete a maior parte da luz do Sol (cerca de 90%), mas a água sem gelo absorve quase tudo (cerca de 94%). Menos gelo → mais calor absorvido → mais gelo derretendo.</div>
+<h3>Elevação do nível do mar</h3>
+<p class="book"><i class='ib'></i> Págs. 267 e 268</p>
+<ul>
+<li>Desde o início do século XX, o mar subiu cerca de <strong>20 cm</strong>, mais rápido nos últimos 30 anos.</li>
+<li>Até 2050, cidades como <strong>Santos</strong>, Nova York, Guangzhou e Nagoya podem ser inundadas.</li>
+<li>Uma subida de mais de 50 cm causaria grandes deslocamentos de pessoas e destruiria ecossistemas costeiros.</li>
+<li>136 cidades portuárias correm risco de alagamento até 2070; <strong>10 no Brasil</strong> (9 capitais e Santos).</li>
+</ul>`,
+ quiz:[
+  {q:"O IPCC é:", ref:"pág. 265", o:["o Painel Intergovernamental sobre Mudanças Climáticas","um gás do efeito estufa","um satélite meteorológico","uma corrente marítima"], e:"Ele reúne cientistas que estudam o aquecimento global."},
+  {q:"Qual destas é uma consequência possível do aquecimento global?", ref:"pág. 265", o:["Maior ocorrência de tempestades, furacões e tornados","Aumento das geleiras","Fim das secas","Diminuição do nível do mar"], e:"Também: extinção de espécies, degelo e elevação do nível do mar."},
+  {q:"A comparação das imagens de 1984 e 2019 mostra:", ref:"pág. 266", o:["a diminuição da camada de gelo no Ártico","o aumento da calota polar","o crescimento do buraco de ozônio","o avanço do deserto do Saara"], e:"É uma das consequências do aquecimento global."},
+  {q:"O degelo se acelera porque:", ref:"pág. 267", o:["a água sem gelo absorve muito mais calor do Sol do que o gelo","o gelo absorve todo o calor","o mar fica mais frio","os ursos-polares derretem o gelo"], e:"O gelo reflete cerca de 90% da luz; a água absorve cerca de 94%."},
+  {q:"Desde o início do século XX, o nível do mar subiu cerca de:", ref:"pág. 268", o:["20 cm","2 m","5 cm","50 m"], e:"E está subindo mais rápido nos últimos 30 anos."},
+  {q:"Qual cidade brasileira é citada entre as que podem ser inundadas até 2050?", ref:"pág. 268", o:["Santos","Brasília","Manaus","Belo Horizonte"], e:"Também Nova York, Guangzhou (China) e Nagoya (Japão)."},
+  {q:"Segundo o Teste da pág. 269, uma consequência do aquecimento global é:", ref:"pág. 269", o:["maior possibilidade de formação de tempestades e ciclones","aumento do volume das geleiras","rebaixamento do nível dos oceanos","aumento da umidade nas áreas secas"], e:"As outras alternativas são o contrário do que acontece."}
+ ]
+}
+];
+
+const JOGOS=[
+{
+ id:"separa", tipo:"separa", icone:"alvo", cor:"#FF9EC0",
+ titulo:"Separa Rápido", desc:"Tempo ou clima? Precipitação ou não? Que tipo de chuva? Estufa ou ozônio? Elemento ou fator?",
+ dados:[
+  {nome:"Tempo ou clima?",dica:"A frase fala de um momento (tempo) ou de um padrão de muitos anos (clima)?",
+   bins:[{k:"t",label:"Tempo",sub:"um momento"},{k:"c",label:"Clima",sub:"padrão de anos"}],
+   items:[["Ontem choveu muito em Belém","t"],["Domingo fez muito calor em Goiânia","t"],["Hoje está nublado em Porto Alegre","t"],["Amanhã vai fazer frio em Curitiba","t"],["Agora está ventando muito","t"],["Nesta manhã houve neblina na estrada","t"],
+          ["Os verões no Brasil central são quentes e chuvosos","c"],["No Sul, os invernos são mais frios","c"],["Manaus é quente e muito úmida o ano todo","c"],["No Saara quase não chove","c"],["Os invernos do Brasil central são secos","c"],["Na serra gaúcha pode nevar no inverno","c"]]},
+  {nome:"É precipitação ou não?",dica:"A água cai do céu (precipitação) ou se forma perto da superfície (não é)?",
+   bins:[{k:"p",label:"É precipitação",sub:"cai das nuvens"},{k:"n",label:"Não é",sub:"forma-se perto do chão"}],
+   items:[["Chuva","p"],["Neve","p"],["Granizo","p"],["Garoa","p"],["Chuvisco","p"],["Orvalho","n"],["Geada","n"],["Neblina","n"],["Nevoeiro","n"]]},
+  {nome:"Que tipo de chuva?",dica:"Convectiva (ar quente sobe), frontal (encontro de massas) ou orográfica (relevo)?",
+   bins:[{k:"c",label:"Convectiva"},{k:"f",label:"Frontal"},{k:"o",label:"Orográfica"}],
+   items:[["Ar quente sobe e forma cúmulo-nimbo","c"],["Comum na Amazônia","c"],["Pancadas no verão do Sudeste","c"],["Nuvem em forma de bigorna","c"],
+          ["Massa de ar frio encontra ar quente e úmido","f"],["Comum no Sul do Brasil","f"],["Chove na área de contato entre duas massas","f"],
+          ["Ar úmido barrado pela serra do Mar","o"],["Chove no barlavento","o"],["Típica do planalto da Borborema","o"],["Também chamada de chuva de relevo","o"],["O sotavento fica seco","o"]]},
+  {nome:"Elemento ou fator do clima?",dica:"É algo que se mede (elemento) ou algo que muda os elementos (fator)?",
+   bins:[{k:"e",label:"Elemento",sub:"o que se mede"},{k:"f",label:"Fator",sub:"o que influencia"}],
+   items:[["Temperatura","e"],["Pressão atmosférica","e"],["Umidade do ar","e"],["Precipitação","e"],["Ventos","e"],
+          ["Latitude","f"],["Altitude","f"],["Massas de ar","f"],["Correntes marítimas","f"],["Maritimidade","f"],["Continentalidade","f"]]},
+  {nome:"Efeito estufa ou camada de ozônio?",dica:"Isso tem a ver com o efeito estufa ou com a camada de ozônio?",
+   bins:[{k:"e",label:"Efeito estufa",sub:"calor preso"},{k:"o",label:"Camada de ozônio",sub:"filtro de ultravioleta"}],
+   items:[["Gás carbônico (CO₂)","e"],["Aquecimento global","e"],["Sem ele a Terra teria −17 °C","e"],["Queima de combustíveis fósseis","e"],["Chaminés e queimadas","e"],
+          ["CFC","o"],["Raios ultravioleta","o"],["Buraco sobre a Antártida","o"],["Protocolo de Montreal","o"],["Fica na estratosfera, a 32 km","o"],["Doenças de pele e nos olhos","o"]]},
+  {nome:"Corrente quente ou fria?",dica:"Esta característica é de corrente marítima quente ou fria?",
+   bins:[{k:"q",label:"Quente"},{k:"f",label:"Fria"}],
+   items:[["Forma-se em águas tropicais","q"],["Deixa o litoral mais úmido","q"],["Causa nevoeiros nas Ilhas Britânicas","q"],["Corrente do Golfo","q"],
+          ["Vem de perto dos polos","f"],["Traz nutrientes e muitos peixes","f"],["Corrente de Humboldt","f"],["Ligada ao deserto do Atacama","f"],["Ligada ao deserto da Namíbia","f"]]}
+ ]
+},
+{
+ id:"causa", tipo:"liga", icone:"setas", cor:"#9EE6B8",
+ titulo:"Causa e Consequência", desc:"Leia a causa e escolha a consequência certa.",
+ rodadas:8,
+ dados:{
+  rotuloA:"Causa", rotuloB:"Consequência", pergunta:"Qual é a consequência?",
+  pares:[
+   ["O ar quente sobe e o ar frio ocupa o lugar dele.","Forma-se o vento (convecção)."],
+   ["Há grande diferença de pressão entre duas áreas.","O vento fica mais forte."],
+   ["A umidade relativa do ar chega a 100%.","Começa a condensação (ponto de saturação)."],
+   ["O vapor passa direto do estado gasoso para o sólido sobre as plantas.","Forma-se geada e a lavoura é danificada."],
+   ["O ar úmido do mar é barrado pela serra do Mar.","Chove no barlavento: chuva orográfica."],
+   ["Uma massa de ar frio encontra uma massa de ar quente e úmido.","Ocorre chuva frontal."],
+   ["Um lugar fica em latitude muito alta.","Recebe raios solares inclinados e é mais frio."],
+   ["Uma cidade fica em grande altitude, como Cuzco.","Tem temperatura e pressão mais baixas."],
+   ["Uma massa de ar polar chega à Amazônia.","Acontece a friagem."],
+   ["Uma corrente marítima fria passa pelo litoral do Chile.","Forma-se o deserto do Atacama."],
+   ["De dia, a terra fica mais quente que o mar.","Sopra a brisa marítima, do mar para o continente."],
+   ["Um lugar fica longe do mar (continentalidade).","Tem maior amplitude térmica."],
+   ["O CFC sobe até a estratosfera.","A camada de ozônio é destruída."],
+   ["Passa mais raio ultravioleta pela atmosfera.","Aumentam as doenças de pele e nos olhos."],
+   ["Aumenta a emissão de gás carbônico.","O efeito estufa se intensifica e o planeta aquece."],
+   ["O gelo do Ártico e da Antártida derrete.","O nível do mar sobe."],
+   ["A cidade troca vegetação por asfalto e concreto.","Forma-se uma ilha de calor."]
+  ]
+ }
+},
+{
+ id:"quem", tipo:"quemsou", icone:"lupa", cor:"#7FD3FF",
+ titulo:"O Que Sou Eu?", desc:"Descubra o fenômeno, o aparelho ou o conceito pelas pistas. Quanto menos pistas, mais pontos.",
+ rodadas:6, pergunta:"O que sou eu?",
+ dados:[
+  {r:"Furacão",pistas:["Sou um ciclone.","Posso durar até uma semana.","Me formo sobre oceanos com água a cerca de 26,5 °C.","No Pacífico oeste me chamam de tufão."]},
+  {r:"Tornado",pistas:["Sou um ciclone.","Duro pouco e sou difícil de prever.","Sou comum nas planícies do centro dos EUA.","O Brasil tem até 200 de mim por ano."]},
+  {r:"Geada",pistas:["Não sou precipitação.","Apareço em noites muito frias.","Passo direto do estado gasoso para o sólido.","Posso matar as plantas da lavoura."]},
+  {r:"Orvalho",pistas:["Não sou precipitação.","Apareço de manhã.","Sou água condensada em superfícies frias.","Formo gotinhas sobre as folhas."]},
+  {r:"Nevoeiro",pistas:["Não sou precipitação.","Sou condensação perto do chão.","Atrapalho rodovias e aeroportos.","Deixo a visibilidade menor que 1 km."]},
+  {r:"Pluviômetro",pistas:["Sou um aparelho.","Fico ao ar livre.","Meço o índice pluviométrico.","Meço a chuva em milímetros."]},
+  {r:"Higrômetro",pistas:["Sou um aparelho.","Sou usado até em museus e bibliotecas.","Meço um valor em porcentagem.","Meço a umidade do ar."]},
+  {r:"Frente",pistas:["Sou uma fronteira.","Não apareço no mapa político.","Separo duas massas de ar diferentes.","Quando sou fria, derrubo a temperatura."]},
+  {r:"Friagem",pistas:["Sou uma queda de temperatura.","Sou causada por uma massa de ar polar.","Posso derrubar até 10 °C em uma hora.","Aconteço na região Norte, até na Amazônia."]},
+  {r:"Brisa terrestre",pistas:["Sou um vento fraco.","Sopro na beira do mar.","Apareço à noite.","Sopro do continente para o mar."]},
+  {r:"Ilha de calor",pistas:["Não sou uma ilha de verdade.","Apareço nas grandes cidades.","Sou causada por asfalto, concreto e falta de árvores.","Deixo o centro mais quente que os arredores."]},
+  {r:"Camada de ozônio",pistas:["Sou uma camada da atmosfera.","Fico na estratosfera, a cerca de 32 km.","O CFC me destrói.","Filtro os raios ultravioleta."]},
+  {r:"Efeito estufa",pistas:["Sou um fenômeno natural.","Sem mim, a Terra teria cerca de −17 °C.","O gás carbônico me intensifica.","Retenho calor perto da superfície."]},
+  {r:"Corrente de Humboldt",pistas:["Sou uma corrente marítima.","Sou fria.","Passo pelo litoral do Chile.","Ajudo a formar o deserto do Atacama."]},
+  {r:"Chuva orográfica",pistas:["Sou um tipo de chuva.","Também me chamam de chuva de barreira.","Caio no barlavento.","Sou comum na serra do Mar."]}
+ ]
+},
+{
+ id:"ordem", tipo:"ordem", icone:"linha", cor:"#FFC98A",
+ titulo:"Em Ordem", desc:"Ponha as etapas dos fenômenos na sequência certa.",
+ dados:{
+  instrucao:"Toque nas etapas na ordem em que acontecem.",
+  fimTitulo:"Sequência certa!", fimDica:"Entender a ordem ajuda a explicar o fenômeno na prova.", outro:"Outra sequência",
+  sets:[
+   {t:"Como se forma a chuva",partes:["1º","2º","3º","4º"],p:["O vapor de água sobe na atmosfera.","O vapor se condensa ao redor de partículas de poeira.","As gotículas formam nuvens e ficam pesadas.","A água cai por causa da gravidade."]},
+   {t:"Chuva orográfica",partes:["1º","2º","3º","4º"],p:["O vento úmido vem do mar.","O ar encontra a montanha e é obrigado a subir.","O ar esfria e chove no barlavento.","O ar chega seco ao sotavento."]},
+   {t:"Convecção (vento)",partes:["1º","2º","3º","4º"],p:["O Sol aquece o ar perto do chão.","O ar quente, menos denso, sobe.","O ar frio, mais denso, vai ocupar o lugar dele.","O movimento do ar forma o vento."]},
+   {t:"Brisa marítima",partes:["1º","2º","3º","4º"],p:["O Sol aquece a terra mais rápido que o mar.","O ar sobre a terra fica quente e sobe.","O ar mais frio do mar ocupa o espaço.","Sopra a brisa do mar para o continente."]},
+   {t:"Do equador ao polo",partes:["Perto do equador","Mais longe","Ainda mais longe","Perto do polo"],p:["Zona tropical: raios mais diretos.","Zona temperada: raios mais inclinados.","Zona glacial: raios muito inclinados.","Temperaturas negativas quase o ano todo."],d:["Tropical","Temperada","Glacial","Polar"]},
+   {t:"Buraco na camada de ozônio",partes:["1º","2º","3º","4º"],p:["O CFC é usado em geladeiras, ar-condicionado e isopor.","O CFC sobe até a estratosfera.","O CFC reage com o ozônio e o destrói.","Passam mais raios ultravioleta."]},
+   {t:"Aquecimento global",partes:["1º","2º","3º","4º"],p:["Queima de combustíveis fósseis e queimadas.","Mais gás carbônico na atmosfera.","Menos calor escapa para o espaço.","A temperatura média do planeta sobe."]},
+   {t:"Elevação do nível do mar",partes:["1º","2º","3º","4º"],p:["A temperatura do planeta aumenta.","O gelo dos polos e das montanhas derrete.","A água absorve mais calor e o degelo acelera.","O nível do mar sobe e ameaça cidades como Santos."]}
+  ]
+ }
+},
+{
+ id:"vf", tipo:"vf", icone:"raio", cor:"#FFD23F",
+ titulo:"Relâmpago V ou F", desc:"60 segundos e 3 vidas: verdadeiro ou falso? Vale a matéria toda.",
+ dados:[
+  ["Tempo é o estado da atmosfera em um momento.",true,"Clima é o padrão de um longo período."],
+  ["Para definir o clima, analisa-se a média de cerca de 30 anos.",true,"É uma sucessão de tempos."],
+  ["“Ontem choveu em Belém” é uma frase sobre clima.",false,"Fala de um momento: é tempo."],
+  ["Meteorologia é a ciência que estuda a atmosfera.",true,"Usa satélites, radares e supercomputadores."],
+  ["O Brasil é o país com maior incidência de raios.",true,"Segundo o INPE."],
+  ["A temperatura é medida com o barômetro.",false,"Com o termômetro. O barômetro mede a pressão."],
+  ["Amplitude térmica é a diferença entre a máxima e a mínima.",true,"Ex.: 21 °C − 3 °C = 18 °C."],
+  ["No alto da montanha a pressão é maior que no litoral.",false,"É menor: há menos ar em cima."],
+  ["O ar se move da alta para a baixa pressão.",true,"Quanto maior a diferença, mais forte o vento."],
+  ["O ar frio é menos denso que o ar quente.",false,"O ar frio é mais denso e tem alta pressão."],
+  ["O ar é formado principalmente por nitrogênio e oxigênio.",true,"78% e 21%."],
+  ["Quanto mais quente o ar, mais vapor de água ele pode conter.",true,"Por isso Manaus é abafada no verão."],
+  ["Umidade relativa de 100% é o ponto de saturação.",true,"A partir daí começa a condensação."],
+  ["A OMS recomenda umidade do ar entre 50% e 60%.",true,"Ar seco causa ardência e tosse."],
+  ["Geada é uma forma de precipitação.",false,"Orvalho, geada, neblina e nevoeiro não são precipitação."],
+  ["No nevoeiro, a visibilidade é menor que 1 km.",true,"Na neblina, é maior que 1 km."],
+  ["Furacões se formam sobre oceanos de águas quentes.",true,"Em torno de 26,5 °C."],
+  ["Tornados duram muito e são fáceis de prever.",false,"São curtos e difíceis de prever."],
+  ["O Brasil já registrou muitos furacões.",false,"Só um: o Catarina, em 2004."],
+  ["A chuva é medida com o pluviômetro, em milímetros.",true,"É o índice pluviométrico."],
+  ["A chuva convectiva é comum na Amazônia.",true,"E no verão do Sudeste."],
+  ["A chuva frontal acontece quando o relevo barra o ar úmido.",false,"Essa é a orográfica. A frontal é o encontro de massas de ar."],
+  ["Na chuva orográfica, chove no barlavento.",true,"O sotavento fica seco."],
+  ["Latitude e altitude são fatores do clima.",true,"Assim como massas de ar e correntes marítimas."],
+  ["Quanto maior a latitude, mais calor o lugar recebe.",false,"Os raios chegam mais inclinados: menos calor."],
+  ["Temperatura e pressão diminuem quando a altitude aumenta.",true,"Por isso há neve em montanhas altas nos trópicos."],
+  ["Friagem é uma onda de calor na Amazônia.",false,"É uma queda brusca de temperatura por massa de ar polar."],
+  ["Frente é a fronteira entre duas massas de ar diferentes.",true,"A frente fria derruba a temperatura."],
+  ["Correntes marítimas frias trazem nutrientes e muitos peixes.",true,"Formam zonas pesqueiras."],
+  ["A corrente de Humboldt está ligada ao deserto do Atacama.",true,"É uma corrente fria."],
+  ["Perto do mar, a amplitude térmica é maior.",false,"É menor: a água mantém a temperatura."],
+  ["A brisa marítima sopra de dia, do mar para o continente.",true,"À noite sopra a brisa terrestre."],
+  ["O clima temperado tem as quatro estações bem definidas.",true,"Primavera, verão, outono e inverno."],
+  ["Combustíveis fósseis incluem petróleo, carvão e gás natural.",true,"Sua queima é a principal causa das mudanças climáticas."],
+  ["Ilhas de calor aparecem nas áreas com muitas árvores.",false,"Aparecem onde há asfalto, concreto e pouca vegetação."],
+  ["A camada de ozônio filtra os raios ultravioleta.",true,"Fica na estratosfera."],
+  ["O CFC destrói a camada de ozônio.",true,"Era usado em geladeiras, ar-condicionado e isopor."],
+  ["O Protocolo de Montreal foi assinado em 1987.",true,"Para eliminar o CFC."],
+  ["Sem o efeito estufa, a Terra seria mais quente.",false,"Seria cerca de −17 °C. Com ele, cerca de 15 °C."],
+  ["O gás carbônico intensifica o efeito estufa.",true,"Vem das queimadas e dos combustíveis fósseis."],
+  ["A China foi o país que mais emitiu gases do efeito estufa em 2018.",true,"Os EUA ficaram em 2º; o Brasil, em 6º."],
+  ["O aquecimento global faz o nível do mar baixar.",false,"O degelo faz o nível do mar subir."],
+  ["O gelo reflete a maior parte da luz do Sol.",true,"A água sem gelo absorve quase tudo."]
+ ]
+},
+{
+ id:"mem", tipo:"memoria", icone:"cartas", cor:"#C9B6FF",
+ titulo:"Caça-Pares", desc:"Jogo da memória: junte cada termo ao seu significado.",
+ dados:[
+  ["Termômetro","mede a temperatura"],["Barômetro","mede a pressão"],["Higrômetro","mede a umidade"],["Pluviômetro","mede a chuva"],
+  ["Amplitude térmica","máxima menos mínima"],["Convecção","ar quente sobe, ar frio desce"],["Ponto de saturação","umidade de 100%"],
+  ["Barlavento","lado da montanha com chuva"],["Sotavento","lado da montanha sem chuva"],["Frente","encontro de massas de ar"],
+  ["Friagem","frio brusco no Norte"],["Maritimidade","clima ameno perto do mar"],["Continentalidade","grande amplitude longe do mar"],
+  ["Ação antrópica","causada pelo ser humano"],["Ilha de calor","centro urbano mais quente"],["CFC","gás que destrói o ozônio"],
+  ["Protocolo de Montreal","acordo contra o CFC"],["IPCC","cientistas do clima da ONU"]
+ ]
+}
+];
+
+</script>
+<script>
+/* =====================================================================
+   MOTOR DO SITE DE REVISÃO · não precisa mexer aqui.
+   Tudo o que muda de uma matéria para outra fica no bloco CONFIG acima.
+   ===================================================================== */
+const L = ["a","b","c","d"];
+const NS = (typeof SITE!=="undefined"&&SITE.id)?SITE.id+":":"";  /* separa o progresso salvo de cada matéria */
+const root = document.getElementById("root");
+let state = {view:"home"};
+
+function getBest(id){ try{ const v = localStorage.getItem(NS+"best-"+id); return v===null?null:+v; }catch(e){ return null; } }
+function setBest(id,n){ try{ const b=getBest(id); if(b===null||n>b) localStorage.setItem(NS+"best-"+id,String(n)); }catch(e){} }
+function shuffle(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+const pick=(a,n)=>shuffle(a).slice(0,n);
+const norm=t=>t.normalize("NFD").replace(/[̀-ͯ]/g,"").toUpperCase();
+const starsTxt=n=>"★".repeat(n)+"☆".repeat(3-n);
+
+/* ===== IDENTIDADE · Profª Ana Clara ===== */
+const pacWa=`<svg class="pac-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>`;
+const pacNome=()=>`<span class="pac-sr">Professora Ana Clara</span><span aria-hidden="true">Prof<span class="pac-ord">a</span> Ana Clara</span>`;
+function pacSignature(){
+  const d=SITE.doodles||["","","",""];
+  return `<div class="pac">
+    <div class="pac-board">
+      <span class="pac-doodle tl" aria-hidden="true">${d[0]}</span><span class="pac-doodle tr" aria-hidden="true">${d[1]}</span>
+      <span class="pac-doodle bl" aria-hidden="true">${d[2]}</span><span class="pac-doodle br" aria-hidden="true">${d[3]}</span>
+      <span class="pac-name">${pacNome()}</span>
+    </div>
+    <div class="pac-tray" aria-hidden="true"><i class="c1"></i><i class="c2"></i><i class="er"></i></div>
+  </div>`;
+}
+function pacPlate(){ return `<div class="pac-plate">${pacNome()}</div>`; }
+function pacMini(){ return SITE.contato?`<a class="pac-mini" href="${SITE.contato}" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">${pacWa}<span>Contato</span></a>`:""; }
+
+/* ===== ícones (traço, sem emoji) ===== */
+const SV=(d)=>`<svg viewBox="0 0 24 24" aria-hidden="true">${d}</svg>`;
+const CHEV=SV('<path d="M9 5l7 7-7 7"/>');
+const ICONES={
+ balao:SV('<path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-5 4v-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/>'),
+ raio:SV('<path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/>'),
+ cartas:SV('<rect x="3" y="8" width="12" height="13" rx="2"/><path d="M8 4.5h11a2 2 0 0 1 2 2V17"/>'),
+ alvo:SV('<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M12 12h.01"/>'),
+ letras:SV('<path d="M3 16.5 5.8 7l2.8 9.5M4.2 13.3h3.2"/><path d="M11.5 17h3.5M17.5 17h3.5"/>'),
+ lista:SV('<path d="M9 6.5h12M9 12h12M9 17.5h12"/><path d="M3.5 6.5h.01M3.5 12h.01M3.5 17.5h.01"/>'),
+ linha:SV('<path d="M3 12h18"/><circle cx="6" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18" cy="12" r="2"/><path d="M6 6v4M12 14v4M18 6v4"/>'),
+ templo:SV('<path d="M4 9h16L12 4 4 9Z"/><path d="M6 9v9M10 9v9M14 9v9M18 9v9"/><path d="M3 21h18M4 18h16"/>'),
+ relogio:SV('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'),
+ lupa:SV('<circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/><path d="M10.5 8v.01M10.5 10.5v3"/>'),
+ setas:SV('<path d="M4 7h11M12 4l3 3-3 3"/><path d="M20 17H9M12 14l-3 3 3 3"/>'),
+ balanca:SV('<path d="M12 4v16M7 20h10M5 7h14"/><path d="M5 7 2.5 13h5L5 7ZM19 7l-2.5 6h5L19 7Z"/>')
+};
+const HEART=on=>`<svg class="hrt${on?"":" off"}" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 5 6 5c2 0 3.4 1 4.4 2.5C11.4 6 12.8 5 15 5c3.3 0 5.1 3.4 3.6 6.8C16.5 16.4 12 21 12 21Z"/></svg>`;
+const hearts=(n,t)=>`<span role="img" aria-label="${n} de ${t} vidas">${Array.from({length:t},(_,i)=>HEART(i<n)).join("")}</span>`;
+
+/* =============== BASE DOS JOGUINHOS =============== */
+let GT=[];
+function gClear(){ GT.forEach(t=>{clearInterval(t);clearTimeout(t);}); GT=[]; }
+function gTimeout(fn,ms){ const t=setTimeout(fn,ms); GT.push(t); return t; }
+function gInterval(fn,ms){ const t=setInterval(fn,ms); GT.push(t); return t; }
+function gBest(id){ try{ const v=localStorage.getItem(NS+"gbest-"+id); return v===null?null:+v; }catch(e){ return null; } }
+function gSetBest(id,n,low){ try{ const b=gBest(id); if(b===null||(low?n<b:n>b)) localStorage.setItem(NS+"gbest-"+id,String(n)); }catch(e){} }
+function anim(node,cls){ node.classList.remove(cls); void node.offsetWidth; node.classList.add(cls); }
+function gEnd(el,o){
+  el.innerHTML=`<div class="panel"><span class="qnum">${o.title||"Resultado"}</span>
+    <div class="score">${o.big}</div><p class="q">${o.msg}</p>${o.extra||""}
+    <button class="btn" id="gagain">Jogar de novo</button>
+    ${o.alt?`<button class="btn alt" id="galt">${o.alt.label}</button>`:""}
+    <button class="btn alt" id="gmenu">Voltar aos joguinhos</button></div>`;
+  document.getElementById("gagain").addEventListener("click",o.again);
+  if(o.alt) document.getElementById("galt").addEventListener("click",o.alt.fn);
+  document.getElementById("gmenu").addEventListener("click",()=>{ gClear(); home("games"); });
+  window.scrollTo({top:0});
+}
+function reviewBox(rows){
+  return rows.length?`<p style="margin:0;font-weight:800">Para revisar:</p><div class="review">${rows.map(r=>`<div>${r}</div>`).join("")}</div>`:"";
+}
+const nota=(n,t,ok,meio,ruim)=>n===t?ok:n>=t*0.7?meio:ruim;
+function feedback(ok,txt,last,onNext){
+  const fb=document.getElementById("gfb");
+  fb.innerHTML=`<div class="balloon ${ok?"ok":"bad"}"><span class="tag">${ok?"Acertou!":"Quase!"}</span>${txt}</div>
+    <button class="btn" id="gnx">${last?"Ver resultado":"Próxima"}</button>`;
+  const nx=document.getElementById("gnx");
+  nx.addEventListener("click",onNext);
+  nx.scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+
+/* ---------- TIPO "simbolos": reconheça a categoria pelo desenho ou pela situação ---------- */
+function jogoSimbolos(el,g){
+  const d=g.dados, keys=Object.keys(d.cats);
+  const nA=Math.min(d.rodadasDesenho??3,keys.length), nB=Math.min(d.rodadasSituacao??5,d.situacoes.length);
+  const rounds=shuffle(pick(keys,nA).map(k=>({t:"A",k})).concat(pick(d.situacoes,nB).map(s=>({t:"B",txt:s[0],k:s[1]}))));
+  let i=0,score=0;
+  function show(){
+    const r=rounds[i]; let body;
+    if(r.t==="A"){
+      const opts=shuffle([r.k].concat(pick(keys.filter(k=>k!==r.k),3)));
+      body=`<p class="q" style="margin-top:0">${d.perguntaDesenho||"O que este desenho representa?"}</p><div class="gballoon" aria-hidden="true">${d.cats[r.k].svg}</div>
+        <div class="opts">${opts.map(k=>`<button class="opt" data-k="${k}"><span>${d.cats[k].nome}</span></button>`).join("")}</div>`;
+    } else {
+      body=`<p class="q" style="margin-top:0">${d.perguntaSituacao||"Qual combina com:"} <em>${r.txt}</em></p>
+        <div class="svgrid">${shuffle(keys).map(k=>`<button class="svbtn" data-k="${k}" aria-label="${d.cats[k].nome}">${d.cats[k].svg}<span class="svl">${d.cats[k].nome}</span></button>`).join("")}</div>`;
+    }
+    el.innerHTML=`<div class="hud"><span class="chip">Rodada ${i+1}/${rounds.length}</span><span class="chip hot" id="bS">Acertos: ${score}</span></div>
+      <div class="panel">${body}<div id="gfb" aria-live="polite"></div></div>`;
+    el.querySelectorAll("[data-k]").forEach(b=>b.addEventListener("click",()=>answer(b.dataset.k,b)));
+    window.scrollTo({top:0});
+  }
+  function answer(k,btn){
+    const r=rounds[i], ok=k===r.k; if(ok) score++;
+    el.querySelectorAll("[data-k]").forEach(b=>{ b.disabled=true; if(b.dataset.k===r.k) b.classList.add("right"); else if(b===btn) b.classList.add("wrong"); });
+    document.getElementById("bS").textContent="Acertos: "+score;
+    const last=i===rounds.length-1;
+    feedback(ok,`${d.cats[r.k].nome}: ${d.cats[r.k].dica}.`,last,()=>{ if(last) end(); else { i++; show(); } });
+  }
+  function end(){
+    gSetBest(g.id,score);
+    gEnd(el,{big:score+"/"+rounds.length,msg:nota(score,rounds.length,"Perfeito! Você reconhece todos.","Muito bem! Só falta afiar um pouquinho.",d.dicaFim||"Vale reler a explicação e jogar de novo."),again:()=>jogoSimbolos(el,g)});
+  }
+  show();
+}
+
+/* ---------- TIPO "vf": relâmpago verdadeiro ou falso ---------- */
+function jogoVF(el,g){
+  const VF=g.dados, T=g.segundos||60;
+  function intro(){
+    el.innerHTML=`<div class="panel"><span class="qnum">Regras</span>
+      <p class="q">Você tem ${T} segundos e 3 vidas. Leia a frase e toque em VERDADEIRO ou FALSO. Acertos seguidos valem mais pontos!</p>
+      <button class="btn" id="gstart">Valendo!</button></div>`;
+    document.getElementById("gstart").addEventListener("click",play);
+  }
+  function play(){
+    let deck=shuffle(VF), n=0, score=0, hits=0, lives=3, streak=0, t=T, done=false; const misses=[];
+    el.innerHTML=`<div class="hud"><span class="chip" id="vS"></span><span class="chip" id="vL"></span><span class="chip hot" id="vC"></span></div>
+      <div class="bar" id="vBar"><i id="vB"></i></div>
+      <div class="panel gcard txt" id="vQ"></div>
+      <div class="ans"><button class="btn vt" id="vT">VERDADEIRO</button><button class="btn vf" id="vF">FALSO</button></div>
+      <div class="vfb" id="vfb" aria-live="polite"></div>`;
+    const $=id=>document.getElementById(id);
+    function hud(){ $("vS").textContent=score+" pts"; $("vL").innerHTML=hearts(lives,3); $("vC").textContent=streak>=2?"Combo x"+streak:"Combo"; }
+    function show(){ if(n>=deck.length){ deck=shuffle(VF); n=0; } $("vQ").textContent=deck[n][0]; anim($("vQ"),"pop"); }
+    function fim(){
+      if(done) return; done=true; gClear();
+      gSetBest(g.id,score);
+      gEnd(el,{big:score+" pts",
+        msg:`${hits} acerto${hits===1?"":"s"}. ${hits>=15?"Que velocidade! Você está afiado.":hits>=8?"Muito bom! Dá para bater o recorde.":"Bora tentar de novo e ir mais longe."}`,
+        extra:reviewBox(misses.slice(0,4).map(m=>`${m[0]}<br><strong>${m[1]?"VERDADEIRO":"FALSO"}: ${m[2]}</strong>`)),
+        again:play});
+    }
+    function ans(v){
+      if(done) return;
+      const [txt,val,why]=deck[n], ok=v===val;
+      if(ok){ score+=10+Math.min(streak,5)*2; hits++; streak++; $("vfb").innerHTML=`<span class="okm">Certo!${streak>=3?" Combo x"+streak+"!":""}</span>`; }
+      else { lives--; streak=0; misses.push([txt,val,why]); $("vfb").innerHTML=`<span class="badm">Era ${val?"VERDADEIRO":"FALSO"}: ${why}</span>`; }
+      n++; hud();
+      if(lives<=0) return fim();
+      show();
+    }
+    $("vT").addEventListener("click",()=>ans(true));
+    $("vF").addEventListener("click",()=>ans(false));
+    gInterval(()=>{
+      t-=0.1; const bar=$("vBar");
+      if(bar){ $("vB").style.width=(Math.max(t,0)/T*100)+"%"; bar.classList.toggle("low",t<=10); }
+      if(t<=0){ t=0; fim(); }
+    },100);
+    hud(); show();
+  }
+  intro();
+}
+
+/* ---------- TIPO "antesdepois": qual vem primeiro? (corrida contra o relógio) ---------- */
+function jogoAntesDepois(el,g){
+  const d=g.dados, T=g.segundos||60, gap=d.distanciaMinima??0;
+  function intro(){
+    el.innerHTML=`<div class="panel"><span class="qnum">Regras</span>
+      <p class="q">${T} segundos e 3 vidas. Aparecem dois cartões: toque em ${d.regra||"o que vem primeiro"}. Acertos seguidos valem mais pontos!</p>
+      <button class="btn" id="gstart">Valendo!</button></div>`;
+    document.getElementById("gstart").addEventListener("click",play);
+  }
+  function par(){
+    for(let k=0;k<200;k++){ const [a,b]=pick(d.itens,2); if(Math.abs(a.v-b.v)>gap&&a.v!==b.v) return [a,b]; }
+    return pick(d.itens,2);
+  }
+  function play(){
+    let score=0,hits=0,lives=3,streak=0,t=T,done=false,cur; const misses=[];
+    el.innerHTML=`<div class="hud"><span class="chip" id="aS"></span><span class="chip" id="aL"></span><span class="chip hot" id="aC"></span></div>
+      <div class="bar" id="aBar"><i id="aB"></i></div>
+      <p class="q" style="text-align:center;margin:14px 0 0">${d.pergunta||"O que vem primeiro?"}</p>
+      <div class="duel" id="aD"></div>
+      <div class="vfb" id="afb" aria-live="polite"></div>`;
+    const $=id=>document.getElementById(id);
+    function hud(){ $("aS").textContent=score+" pts"; $("aL").innerHTML=hearts(lives,3); $("aC").textContent=streak>=2?"Combo x"+streak:"Combo"; }
+    function show(){
+      cur=par();
+      $("aD").innerHTML=cur.map((it,k)=>`<button class="ev" data-k="${k}">${it.t}</button>`).join("");
+      $("aD").querySelectorAll(".ev").forEach(b=>b.addEventListener("click",()=>ans(+b.dataset.k)));
+      anim($("aD"),"pop");
+    }
+    function ans(k){
+      if(done) return;
+      const first=(d.maiorPrimeiro? (cur[0].v>cur[1].v?0:1) : (cur[0].v<cur[1].v?0:1)), ok=k===first;
+      const A=cur[first], B=cur[1-first];
+      const why=`${A.t} (${A.label}) vem antes de ${B.t.charAt(0).toLowerCase()+B.t.slice(1)} (${B.label}).`;
+      if(ok){ score+=10+Math.min(streak,5)*2; hits++; streak++; $("afb").innerHTML=`<span class="okm">Certo! ${A.label} → ${B.label}${streak>=3?" · Combo x"+streak+"!":""}</span>`; }
+      else { lives--; streak=0; misses.push(why); $("afb").innerHTML=`<span class="badm">Não: ${A.label} vem antes de ${B.label}.</span>`; }
+      hud();
+      if(lives<=0) return fim();
+      show();
+    }
+    function fim(){
+      if(done) return; done=true; gClear();
+      gSetBest(g.id,score);
+      gEnd(el,{big:score+" pts",msg:`${hits} acerto${hits===1?"":"s"}. ${hits>=15?"Que linha do tempo afiada!":hits>=8?"Muito bom! Dá para bater o recorde.":"Bora tentar de novo e ir mais longe."}`,
+        extra:reviewBox(misses.slice(0,4)),again:play});
+    }
+    gInterval(()=>{
+      t-=0.1; const bar=$("aBar");
+      if(bar){ $("aB").style.width=(Math.max(t,0)/T*100)+"%"; bar.classList.toggle("low",t<=10); }
+      if(t<=0){ t=0; fim(); }
+    },100);
+    hud(); show();
+  }
+  intro();
+}
+
+/* ---------- TIPO "quemsou": adivinhe pelas pistas ---------- */
+function jogoQuemSou(el,g){
+  const d=g.dados, N=Math.min(g.rodadas||6,d.length), rounds=pick(d,N);
+  let i=0,total=0; const max=N*4;
+  function show(){
+    const r=rounds[i], opts=shuffle([r.r].concat(pick(d.filter(x=>x.r!==r.r).map(x=>x.r),3)));
+    let shown=1, done=false;
+    el.innerHTML=`<div class="hud"><span class="chip">Rodada ${i+1}/${N}</span><span class="chip hot" id="qT">Pontos: ${total}</span><span class="chip" id="qV"></span></div>
+      <div class="panel"><p class="q" style="margin-top:0">${g.pergunta||"Quem sou eu?"}</p>
+      <ol class="clues" id="qC"></ol>
+      <button class="btn alt" id="qMais" style="margin:0 0 14px">Mais uma pista</button>
+      <div class="opts">${opts.map(o=>`<button class="opt" data-o="${o}"><span>${o}</span></button>`).join("")}</div>
+      <div id="gfb" aria-live="polite"></div></div>`;
+    const $=id=>document.getElementById(id);
+    function paint(){
+      $("qC").innerHTML=r.pistas.map((p,k)=>k<shown?`<li>${p}</li>`:`<li class="hide">Pista escondida</li>`).join("");
+      $("qV").textContent=`Vale ${Math.max(1,5-shown)} pt${5-shown===1?"":"s"}`;
+      $("qMais").disabled=shown>=r.pistas.length;
+    }
+    function finish(ok){
+      done=true; shown=r.pistas.length; paint();
+      const pts=ok?Math.max(1,5-revealedAtGuess):0; total+=pts; $("qT").textContent="Pontos: "+total;
+      el.querySelectorAll(".opt").forEach(b=>{ b.disabled=true; if(b.dataset.o===r.r) b.classList.add("right"); });
+      $("qMais").disabled=true;
+      const last=i===N-1;
+      feedback(ok,`${ok?`+${pts} ponto${pts===1?"":"s"}. `:""}A resposta é <strong>${r.r}</strong>.${r.extra?" "+r.extra:""}`,last,()=>{ if(last) end(); else { i++; show(); } });
+    }
+    let revealedAtGuess=1;
+    $("qMais").addEventListener("click",()=>{ if(done) return; shown=Math.min(shown+1,r.pistas.length); paint(); });
+    el.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{
+      if(done) return;
+      revealedAtGuess=shown;
+      if(b.dataset.o===r.r) finish(true);
+      else {
+        b.disabled=true; b.classList.add("wrong","off"); anim(b,"shake");
+        if(shown<r.pistas.length){ shown++; paint(); }
+        else finish(false);
+      }
+    }));
+    paint(); window.scrollTo({top:0});
+  }
+  function end(){
+    gSetBest(g.id,total);
+    gEnd(el,{big:total+" pts",msg:`De ${max} possíveis. ${total>=max*0.75?"Detetive de primeira!":total>=max*0.45?"Muito bem! Tente acertar com menos pistas.":"Vale reler a matéria e tentar de novo."}`,again:()=>jogoQuemSou(el,g)});
+  }
+  show();
+}
+
+/* ---------- TIPO "liga": ligue cada item ao seu par (ex.: causa → consequência) ---------- */
+function jogoLiga(el,g){
+  const d=g.dados, N=Math.min(g.rodadas||8,d.pares.length), rounds=pick(d.pares,N);
+  let i=0,score=0; const miss=[];
+  function show(){
+    const [a,b]=rounds[i], opts=shuffle([b].concat(pick(d.pares.filter(p=>p[1]!==b).map(p=>p[1]),3)));
+    el.innerHTML=`<div class="hud"><span class="chip">Rodada ${i+1}/${N}</span><span class="chip hot" id="lS">Acertos: ${score}</span></div>
+      <div class="panel"><span class="qnum">${d.rotuloA||"Item"}</span>
+      <p class="excerpt">${a}</p>
+      <p class="q">${d.pergunta||"Qual é o par certo?"}</p>
+      <div class="opts">${opts.map((o,k)=>`<button class="opt" data-k="${k}"><span class="l">${L[k]})</span><span>${o}</span></button>`).join("")}</div>
+      <div id="gfb" aria-live="polite"></div></div>`;
+    el.querySelectorAll(".opt").forEach(btn=>btn.addEventListener("click",()=>{
+      const k=+btn.dataset.k, ok=opts[k]===b; if(ok) score++; else miss.push(`${a}<br><strong>→ ${b}</strong>`);
+      el.querySelectorAll(".opt").forEach((x,j)=>{ x.disabled=true; if(opts[j]===b) x.classList.add("right"); else if(x===btn) x.classList.add("wrong"); });
+      document.getElementById("lS").textContent="Acertos: "+score;
+      const last=i===N-1;
+      feedback(ok,`${d.rotuloB||"Par"}: ${b}`,last,()=>{ if(last) end(); else { i++; show(); } });
+    }));
+    window.scrollTo({top:0});
+  }
+  function end(){
+    gSetBest(g.id,score);
+    gEnd(el,{big:score+"/"+N,msg:nota(score,N,"Perfeito! Você ligou tudo certinho.","Muito bem!","Vale reler a matéria e tentar de novo."),extra:reviewBox(miss),again:()=>jogoLiga(el,g)});
+  }
+  show();
+}
+
+/* ---------- TIPO "memoria": jogo da memória termo × significado ---------- */
+function jogoMemoria(el,g){
+  const ps=pick(g.dados,6);
+  const cards=shuffle(ps.flatMap((p,k)=>[{k,t:p[0],term:true},{k,t:p[1],term:false}]));
+  let first=null, lock=false, moves=0, found=0;
+  el.innerHTML=`<p class="sub" style="margin-bottom:10px">Vire duas cartas: as amarelas são os termos, as brancas são os significados.</p>
+    <div class="hud"><span class="chip" id="mM">Jogadas: 0</span><span class="chip hot" id="mF">Pares: 0/6</span></div>
+    <div class="mem">${cards.map((c,j)=>`<button class="mcard ${c.term?"term":"def"}" data-j="${j}" aria-label="Carta ${j+1}"><span class="mb" aria-hidden="true">?</span><span class="mf">${c.t}</span></button>`).join("")}</div>`;
+  const btn=j=>el.querySelector(`.mcard[data-j="${j}"]`);
+  el.querySelectorAll(".mcard").forEach(b=>b.addEventListener("click",()=>flip(+b.dataset.j)));
+  function flip(j){
+    const b=btn(j);
+    if(lock||b.classList.contains("up")||b.classList.contains("done")) return;
+    b.classList.add("up");
+    if(first===null){ first=j; return; }
+    moves++; document.getElementById("mM").textContent="Jogadas: "+moves;
+    const a=first; first=null;
+    if(cards[a].k===cards[j].k){
+      [a,j].forEach(x=>{ const c=btn(x); c.classList.remove("up"); c.classList.add("done"); });
+      found++; document.getElementById("mF").textContent=`Pares: ${found}/6`;
+      if(found===6) gTimeout(win,700);
+    } else {
+      lock=true;
+      gTimeout(()=>{ btn(a).classList.remove("up"); btn(j).classList.remove("up"); lock=false; },900);
+    }
+  }
+  function win(){
+    gSetBest(g.id,moves,true);
+    const s=moves<=8?3:moves<=12?2:1;
+    gEnd(el,{big:starsTxt(s),msg:`Você achou os 6 pares em ${moves} jogadas. ${s===3?"Memória de elefante!":s===2?"Muito bom! Dá para fazer em menos.":"Boa! Tente de novo para usar menos jogadas."}`,again:()=>jogoMemoria(el,g)});
+  }
+}
+
+/* ---------- TIPO "separa": classifique rápido em caixas ---------- */
+function jogoSepara(el,g){
+  const SEP=g.dados;
+  function menu(){
+    el.innerHTML=`<div class="panel"><span class="qnum">Escolha o desafio</span>
+      <div class="opts">${SEP.map((c,k)=>`<button class="opt" data-c="${k}"><span>${c.nome}</span></button>`).join("")}</div></div>`;
+    el.querySelectorAll("[data-c]").forEach(b=>b.addEventListener("click",()=>play(SEP[+b.dataset.c])));
+  }
+  function play(c){
+    gClear();
+    const items=pick(c.items,Math.min(10,c.items.length)); let i=0,score=0,streak=0,lock=false; const miss=[];
+    el.innerHTML=`<div class="hud"><span class="chip" id="sP"></span><span class="chip hot" id="sS"></span><span class="chip" id="sC"></span></div>
+      <p class="sub" style="margin-bottom:0">${c.dica}</p>
+      <div class="panel gcard word" id="sW"></div>
+      <div class="bins">${c.bins.map(b=>`<button class="btn bin" data-b="${b.k}">${b.label}${b.sub?`<small>${b.sub}</small>`:""}</button>`).join("")}</div>`;
+    const $=id=>document.getElementById(id), bins=[...el.querySelectorAll(".bin")];
+    function hud(){ $("sP").textContent=`${Math.min(i+1,items.length)}/${items.length}`; $("sS").textContent=`Acertos: ${score}`; $("sC").textContent=streak>=2?`Combo x${streak}`:""; }
+    function show(){ lock=false; bins.forEach(b=>b.classList.remove("right","wrong")); const w=$("sW"); w.textContent=items[i][0]; w.classList.toggle("long",items[i][0].length>14); anim(w,"pop"); hud(); }
+    function choose(k,btn){
+      if(lock) return; lock=true;
+      const right=items[i][1], ok=k===right;
+      if(ok){ score++; streak++; btn.classList.add("right"); }
+      else { streak=0; btn.classList.add("wrong"); bins.find(b=>b.dataset.b===right).classList.add("right"); miss.push(items[i]); }
+      hud();
+      gTimeout(()=>{ i++; if(i>=items.length) end(); else show(); }, ok?550:1400);
+    }
+    function end(){
+      gSetBest(g.id,score);
+      gEnd(el,{title:"Resultado · "+c.nome,big:score+"/"+items.length,
+        msg:score===items.length?"Perfeito! Nenhum escapou.":score>=items.length*0.7?"Muito bom!":"Vale reler a matéria e tentar de novo.",
+        extra:reviewBox(miss.map(m=>`<strong>${m[0]}</strong> → ${c.bins.find(b=>b.k===m[1]).label}`)),
+        again:()=>play(c), alt:{label:"Escolher outro desafio",fn:menu}});
+    }
+    bins.forEach(b=>b.addEventListener("click",()=>choose(b.dataset.b,b)));
+    show();
+  }
+  if(SEP.length===1) play(SEP[0]); else menu();
+}
+
+/* ---------- TIPO "forca": adivinhe a palavra pela dica ---------- */
+function jogoForca(el,g){
+  const words=pick(g.dados,5); let wi=0, found=0;
+  function word(){
+    const [w,dica]=words[wi], letters=[...w], used=new Set(); let lives=6, done=false;
+    el.innerHTML=`<div class="hud"><span class="chip">Palavra ${wi+1}/${words.length}</span><span class="chip hot">Acertei: ${found}</span><span class="chip" id="fL"></span></div>
+      <div class="panel"><p class="q" style="margin-top:0">Dica: ${dica}</p>
+      <div class="fw" id="fW" aria-live="polite"></div>
+      <div class="fk">${"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l=>`<button class="key" data-l="${l}">${l}</button>`).join("")}</div>
+      <div id="ffb" aria-live="polite"></div></div>`;
+    const $=id=>document.getElementById(id);
+    function paint(reveal){
+      $("fW").innerHTML=letters.map(ch=>{ if(ch===" ") return `<span class="fl sp"></span>`; const got=used.has(norm(ch)); return `<span class="fl${reveal&&!got?" miss":""}">${got||reveal?ch:""}</span>`; }).join("");
+      $("fL").innerHTML=hearts(lives,6);
+    }
+    function finish(won){
+      done=true; paint(!won);
+      el.querySelectorAll(".key").forEach(k=>k.disabled=true);
+      const last=wi===words.length-1;
+      $("ffb").innerHTML=`<div class="balloon ${won?"ok":"bad"}"><span class="tag">${won?"Acertou!":"Não foi dessa vez"}</span>A palavra era <strong>${w}</strong>.</div>
+        <button class="btn" id="fnx">${last?"Ver resultado":"Próxima palavra"}</button>`;
+      $("fnx").addEventListener("click",()=>{ if(last) end(); else { wi++; word(); } });
+      $("fnx").scrollIntoView({behavior:"smooth",block:"nearest"});
+    }
+    function guess(l,btn){
+      if(done||used.has(l)) return;
+      used.add(l); btn.disabled=true;
+      if(letters.some(ch=>norm(ch)===l)) btn.classList.add("right"); else { btn.classList.add("wrong"); lives--; }
+      paint(false);
+      if(letters.every(ch=>ch===" "||used.has(norm(ch)))){ found++; finish(true); }
+      else if(lives<=0) finish(false);
+    }
+    el.querySelectorAll(".key").forEach(k=>k.addEventListener("click",()=>guess(k.dataset.l,k)));
+    paint(false); window.scrollTo({top:0});
+  }
+  function end(){
+    gSetBest(g.id,found);
+    gEnd(el,{big:found+"/"+words.length,msg:found===words.length?"Sem errar nenhuma! Que vocabulário.":found>=3?"Muito bem! Quase lá.":"Vale reler a matéria e tentar de novo.",again:()=>jogoForca(el,g)});
+  }
+  word();
+}
+
+/* ---------- TIPO "ordem": coloque em ordem (linha do tempo, etapas, enredo) ---------- */
+function jogoOrdem(el,g){
+  const d=g.dados;
+  if(!g._fila||!g._fila.length) g._fila=shuffle(d.sets.map((h,k)=>k));
+  const h=d.sets[g._fila.shift()], n=h.p.length, partes=h.partes||d.partes||h.p.map((_,k)=>`${k+1}º`);
+  const cards=shuffle(h.p.map((t,k)=>({t,k})));
+  let next=0, errs=0;
+  el.innerHTML=`<div class="hud"><span class="chip">${h.t}</span><span class="chip hot" id="eE">Erros: 0</span></div>
+    <p class="sub" style="margin-bottom:10px">${d.instrucao||"Toque nos itens na ordem certa."}</p>
+    <div class="slots">${partes.map((p,k)=>`<div class="slot" id="sl${k}"><b>${k+1} · ${p}</b><span>toque no item certo</span></div>`).join("")}</div>
+    <div class="cards">${cards.map(c=>`<button class="ecard" data-k="${c.k}">${c.t}</button>`).join("")}</div>
+    <div id="efb" aria-live="polite"></div>`;
+  el.querySelectorAll(".ecard").forEach(b=>b.addEventListener("click",()=>{
+    if(+b.dataset.k===next){
+      const sl=document.getElementById("sl"+next);
+      sl.classList.add("full"); if(h.d&&h.d[next]) sl.querySelector("b").textContent=`${next+1} · ${h.d[next]}`;
+      sl.querySelector("span").textContent=b.textContent; b.classList.add("used"); next++;
+      if(next===n) win();
+    } else {
+      errs++; document.getElementById("eE").textContent="Erros: "+errs; anim(b,"shake");
+    }
+  }));
+  function win(){
+    const s=errs===0?3:errs<=2?2:1; gSetBest(g.id,s);
+    document.getElementById("efb").innerHTML=`<div class="balloon ok"><span class="tag">${d.fimTitulo||"Tudo em ordem!"} ${starsTxt(s)}</span>${errs===0?"Sem nenhum erro.":errs+(errs===1?" erro":" erros")+" no caminho."} ${d.fimDica||""}</div>
+      <button class="btn" id="eNext">${d.outro||"Outra sequência"}</button><button class="btn alt" id="eMenu">Voltar aos joguinhos</button>`;
+    document.getElementById("eNext").addEventListener("click",()=>jogoOrdem(el,g));
+    document.getElementById("eMenu").addEventListener("click",()=>{ gClear(); home("games"); });
+    document.getElementById("efb").scrollIntoView({behavior:"smooth",block:"nearest"});
+  }
+}
+
+const TIPOS={simbolos:jogoSimbolos,vf:jogoVF,antesdepois:jogoAntesDepois,quemsou:jogoQuemSou,liga:jogoLiga,memoria:jogoMemoria,separa:jogoSepara,forca:jogoForca,ordem:jogoOrdem};
+const FMT={
+ simbolos:(b,g)=>`melhor: ${b} acertos`, vf:b=>`recorde: ${b} pts`, antesdepois:b=>`recorde: ${b} pts`,
+ quemsou:b=>`recorde: ${b} pts`, liga:b=>`melhor: ${b} acertos`, memoria:b=>`recorde: ${b} jogadas`,
+ separa:b=>`melhor: ${b} acertos`, forca:b=>`melhor: ${b}/5`, ordem:b=>`melhor: ${starsTxt(b)}`
+};
+
+function openGame(id){
+  gClear(); root.classList.remove("wide");
+  const g=JOGOS.find(x=>x.id===id);
+  state={view:"game",id};
+  root.innerHTML=`<button class="back" id="back">← Todos os joguinhos</button>
+    <h1 style="font-size:clamp(1.8rem,7vw,2.5rem)">${g.titulo}</h1>
+    ${pacPlate()}
+    <p class="sub">${g.desc}</p>
+    <div id="game"></div>`;
+  document.getElementById("back").addEventListener("click",()=>{ gClear(); home("games"); });
+  window.scrollTo({top:0});
+  TIPOS[g.tipo](document.getElementById("game"),g);
+}
+
+/* =============== TELA INICIAL =============== */
+function home(tab){
+  tab = typeof tab==="string" ? tab : "mods";
+  gClear(); root.classList.add("wide");
+  state={view:"home",tab};
+  const cap=t=>t.charAt(0).toUpperCase()+t.slice(1);
+  const prog=(label,n,t)=>`<div class="prog"><span>${label}</span><span class="track"><i style="width:${Math.round(n/t*100)}%"></i></span><b>${n}/${t}</b></div>`;
+  const doneM=MODS.filter(m=>getBest(m.id)!==null).length, doneG=JOGOS.filter(g=>gBest(g.id)!==null).length;
+  const card=(m,i)=>{
+    const b=getBest(m.id);
+    return `<button class="mod" data-id="${m.id}" style="--c:${m.color};--i:${i}">
+      <span class="badge${m.tag.length>2?" sm":""}" style="background:${m.color}">${m.tag}</span>
+      <span class="mt"><h2>${m.title}</h2><p>${m.pages}</p>${b!==null?`<span class="pill">Melhor nota: ${b}/${m.quiz.length}</span>`:""}</span>
+      <span class="go" aria-hidden="true">${CHEV}</span>
+    </button>`;};
+  const secs=(typeof SECOES!=="undefined"&&SECOES.length)?SECOES:[{mod:0}];
+  const grupo=(sec)=>{ const ms=MODS.filter(m=>(m.mod||0)===(sec.mod||0)); if(!ms.length) return "";
+    return `${sec.t?`<h2 class="sec">${sec.t}</h2>`:""}${sec.s?`<p class="secsub">${sec.s}</p>`:""}<div class="grid${ms.length===1?" solo":""}">${ms.map(card).join("")}</div>`; };
+  const mods = prog("Quizzes feitos",doneM,MODS.length)+secs.map(grupo).join("")+
+    `<p class="foot"><i class='ib'></i> ${SITE.rodapeModulos||"Quando aparece “pág.”, vale abrir a apostila."}</p>`;
+  const games = prog("Jogos já jogados",doneG,JOGOS.length)+`<div class="grid">${JOGOS.map((g,i)=>{
+    const b=gBest(g.id);
+    return `<button class="mod" data-g="${g.id}" style="--c:${g.cor};--i:${i}">
+      <span class="badge" style="background:${g.cor}">${ICONES[g.icone]||ICONES.alvo}</span>
+      <span class="mt"><h2>${g.titulo}</h2><p>${g.desc}</p>${b!==null?`<span class="pill">${cap(FMT[g.tipo](b,g))}</span>`:""}</span>
+      <span class="go" aria-hidden="true">${CHEV}</span>
+    </button>`;}).join("")}</div>
+  <p class="foot">${SITE.rodapeJogos||"Errou? Sem problema: é treinando que se aprende."}</p>`;
+  root.innerHTML = `
+  <div class="hero">
+  <div class="toprow"><span class="eyebrow">${SITE.serie}</span>${pacMini()}</div>
+  <h1>${SITE.titulo}</h1>
+  ${pacSignature()}
+  <p class="sub">${tab==="games"?SITE.subJogos:SITE.subModulos}</p>
+  </div>
+  <div class="htabs" role="tablist">
+    <button class="htab" role="tab" aria-selected="${tab==="mods"}" id="hMods">Módulos <span class="cnt">${MODS.length}</span></button>
+    <button class="htab" role="tab" aria-selected="${tab==="games"}" id="hGames">Joguinhos <span class="cnt">${JOGOS.length}</span></button>
+  </div>
+  ${tab==="games"?games:mods}`;
+  document.getElementById("hMods").addEventListener("click",()=>home("mods"));
+  document.getElementById("hGames").addEventListener("click",()=>home("games"));
+  root.querySelectorAll(".mod[data-id]").forEach(b=>b.addEventListener("click",()=>openMod(b.dataset.id,"study")));
+  root.querySelectorAll(".mod[data-g]").forEach(b=>b.addEventListener("click",()=>openGame(b.dataset.g)));
+  window.scrollTo({top:0});
+}
+
+/* =============== MÓDULOS: explicação + quiz =============== */
+function header(m,tab){
+  return `<button class="back" id="back">← Todos os módulos</button>
+  <h1 style="font-size:clamp(1.8rem,7vw,2.5rem)">${m.title}</h1>
+  ${pacPlate()}
+  <p class="sub" style="margin-bottom:0">${m.pages}</p>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="${tab==="study"}" id="tStudy">Estudar</button>
+    <button class="tab" role="tab" aria-selected="${tab==="quiz"}" id="tQuiz">Quiz (${m.quiz.length})</button>
+  </div>`;
+}
+function wireHeader(m){
+  document.getElementById("back").addEventListener("click",()=>home("mods"));
+  document.getElementById("tStudy").addEventListener("click",()=>openMod(m.id,"study"));
+  document.getElementById("tQuiz").addEventListener("click",()=>openMod(m.id,"quiz"));
+}
+function openMod(id,tab){
+  root.classList.remove("wide");
+  const m = MODS.find(x=>x.id===id);
+  if(tab==="study"){
+    state={view:"study",m};
+    root.innerHTML = header(m,"study") + `<div class="panel study">${m.study}</div>
+      <button class="btn" id="go">Fazer o quiz deste módulo</button>`;
+    wireHeader(m);
+    document.getElementById("go").addEventListener("click",()=>openMod(id,"quiz"));
+    window.scrollTo({top:0});
+  } else {
+    const qs = shuffle(m.quiz).map(q=>{
+      const opts = shuffle(q.o.map((t,k)=>({t,right:k===0})));
+      return {...q, opts, a:opts.findIndex(o=>o.right)};
+    });
+    state={view:"quiz",m,qs,i:0,ans:[]};
+    renderQ();
+  }
+}
+function bar(){
+  const {qs,i,ans}=state;
+  return `<div class="progress" aria-hidden="true">${qs.map((q,k)=>{
+    const c = ans[k]===undefined ? (k===i?"now":"") : (ans[k]===q.a?"ok":"bad");
+    return `<span class="${c}"></span>`;}).join("")}</div>`;
+}
+function renderQ(){
+  const {m,qs,i}=state, q=qs[i];
+  root.innerHTML = header(m,"quiz") + `<div class="panel" aria-live="polite">
+    ${bar()}
+    <span class="qnum">Questão ${i+1} de ${qs.length}</span>${q.ref?`<span class="book"><i class='ib'></i> Apostila, ${q.ref}</span>`:""}
+    ${q.ex?`<p class="excerpt">${q.ex}</p>`:""}
+    <p class="q">${q.q}</p>
+    <div class="opts">${q.opts.map((o,k)=>`<button class="opt" data-k="${k}"><span class="l">${L[k]})</span><span>${o.t}</span></button>`).join("")}</div>
+    <div id="fb"></div></div>`;
+  wireHeader(m);
+  root.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>choose(+b.dataset.k)));
+  window.scrollTo({top:0});
+}
+function choose(k){
+  const {qs,i}=state, q=qs[i];
+  state.ans[i]=k;
+  root.querySelectorAll(".opt").forEach((b,j)=>{
+    b.disabled=true;
+    if(j===q.a) b.classList.add("right"); else if(j===k) b.classList.add("wrong");
+  });
+  root.querySelector(".progress").outerHTML = bar();
+  const ok = k===q.a, last = i===qs.length-1;
+  document.getElementById("fb").innerHTML =
+    `<div class="balloon ${ok?"ok":"bad"}"><span class="tag">${ok?"Acertou!":"Quase!"}</span>${q.e}</div>
+     <button class="btn" id="nx">${last?"Ver meu resultado":"Próxima questão"}</button>`;
+  const nx=document.getElementById("nx");
+  nx.addEventListener("click",()=>{ if(last) finish(); else { state.i++; renderQ(); } });
+  nx.focus({preventScroll:true});
+  nx.scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+function finish(){
+  const {m,qs,ans}=state, T=qs.length;
+  const n = qs.filter((q,k)=>ans[k]===q.a).length;
+  setBest(m.id,n);
+  const msg = n===T?"Nota máxima! Mandou muito bem.":n>=T*0.8?"Muito bom! Revise só as que errou.":n>=T*0.5?"Na média. Releia a explicação e tente de novo.":"Bora reler a explicação e tentar outra vez.";
+  const wrong = qs.filter((q,k)=>ans[k]!==q.a);
+  root.innerHTML = header(m,"quiz") + `<div class="panel">
+    <span class="qnum">Resultado</span>
+    <div class="score">${n}/${T}</div>
+    <p class="q">${msg}</p>
+    ${wrong.length?`<p style="margin:0;font-weight:800">Para revisar:</p><div class="review">${wrong.map(q=>`<div>${q.ex?`<em>${q.ex}</em><br>`:""}${q.q}<br><strong>Resposta: ${q.opts[q.a].t}</strong>${q.ref?`<br><i class='ib'></i> ${q.ref}`:""}</div>`).join("")}</div>`:""}
+    <button class="btn" id="again">Refazer (questões embaralhadas)</button>
+    <button class="btn alt" id="study">Voltar para a explicação</button>
+  </div>`;
+  wireHeader(m);
+  document.getElementById("again").addEventListener("click",()=>openMod(m.id,"quiz"));
+  document.getElementById("study").addEventListener("click",()=>openMod(m.id,"study"));
+  window.scrollTo({top:0});
+}
+
+home();
+
+</script>
+</body>
+</html>
